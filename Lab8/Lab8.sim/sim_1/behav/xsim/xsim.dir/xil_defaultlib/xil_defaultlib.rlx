@@ -1,0 +1,11 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/youssef/Desktop/DigitalSystems/Lab8/Lab8.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/Lab8/Lab8.srcs/sim_1/new/Part1_Sim.v,1681437370,verilog,,,,SRLatch_Simulation,,,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/Lab8/Lab8.srcs/sim_1/new/Part2_Sim.v,1680877921,verilog,,,,GatedSRLatch_Simulation,,,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/Lab8/Lab8.srcs/sim_1/new/Part3_Sim.v,1680878351,verilog,,,,DFlipFlop_Simulation,,,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/Lab8/Lab8.srcs/sources_1/new/Part1.v,1681436585,verilog,,C:/Users/youssef/Desktop/DigitalSystems/Lab8/Lab8.srcs/sim_1/new/Part1_Sim.v,,SRLatch,,,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/Lab8/Lab8.srcs/sources_1/new/Part2.v,1681436643,verilog,,C:/Users/youssef/Desktop/DigitalSystems/Lab8/Lab8.srcs/sim_1/new/Part2_Sim.v,,GatedSRLatch,,,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/Lab8/Lab8.srcs/sources_1/new/Part3.v,1681436686,verilog,,C:/Users/youssef/Desktop/DigitalSystems/Lab8/Lab8.srcs/sim_1/new/Part3_Sim.v,,DFlipFlop,,,,,,,,

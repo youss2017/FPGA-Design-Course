@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Sep 21 23:04:08 2023
+# Process ID: 9660
+# Current directory: C:/Users/youssef/Desktop/DigitalSystems/ComputerArch/ComputerArch.runs/synth_1
+# Command line: vivado.exe -log Comp.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Comp.tcl
+# Log file: C:/Users/youssef/Desktop/DigitalSystems/ComputerArch/ComputerArch.runs/synth_1/Comp.vds
+# Journal file: C:/Users/youssef/Desktop/DigitalSystems/ComputerArch/ComputerArch.runs/synth_1\vivado.jou
+# Running On: DESKTOP-339EFSV, OS: Windows, CPU Frequency: 4392 MHz, CPU Physical cores: 12, Host memory: 51481 MB
+#-----------------------------------------------------------
+source Comp.tcl -notrace

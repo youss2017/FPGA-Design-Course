@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Aug  4 21:15:12 2024
+# Process ID: 16392
+# Current directory: C:/Users/youssef/Desktop/DigitalSystems/DFT/DFT.runs/synth_1
+# Command line: vivado.exe -log gate.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gate.tcl
+# Log file: C:/Users/youssef/Desktop/DigitalSystems/DFT/DFT.runs/synth_1/gate.vds
+# Journal file: C:/Users/youssef/Desktop/DigitalSystems/DFT/DFT.runs/synth_1\vivado.jou
+# Running On: DESKTOP-339EFSV, OS: Windows, CPU Frequency: 4342 MHz, CPU Physical cores: 12, Host memory: 51481 MB
+#-----------------------------------------------------------
+source gate.tcl -notrace

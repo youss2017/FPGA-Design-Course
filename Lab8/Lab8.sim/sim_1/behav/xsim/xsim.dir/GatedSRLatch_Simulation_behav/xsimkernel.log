@@ -1,0 +1,7 @@
+Running: xsim.dir/GatedSRLatch_Simulation_behav/xsimk.exe -simmode gui -wdb GatedSRLatch_Simulation_behav.wdb -simrunnum 0 -socket 59965
+Design successfully loaded
+Design Loading Memory Usage: 8424 KB (Peak: 8424 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 8996 KB (Peak: 8996 KB)
+Simulation CPU Usage: 0 ms

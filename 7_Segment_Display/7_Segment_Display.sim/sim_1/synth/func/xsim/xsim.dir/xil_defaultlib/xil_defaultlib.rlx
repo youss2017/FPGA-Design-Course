@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/youssef/Desktop/DigitalSystems/7_Segment_Display/7_Segment_Display.sim/sim_1/synth/func/xsim/divider_sim_func_synth.v,1724978055,verilog,,C:/Users/youssef/Desktop/DigitalSystems/7_Segment_Display/7_Segment_Display.srcs/sources_1/new/ClockDivider.v,,SegmentDriver;display;glbl,,,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/7_Segment_Display/7_Segment_Display.srcs/sim_1/new/divider_sim.v,1724977942,verilog,,,,divider_sim,,,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/7_Segment_Display/7_Segment_Display.srcs/sources_1/new/ClockDivider.v,1724977235,verilog,,C:/Users/youssef/Desktop/DigitalSystems/7_Segment_Display/7_Segment_Display.srcs/sim_1/new/divider_sim.v,,ClockDivider,,,,,,,,
