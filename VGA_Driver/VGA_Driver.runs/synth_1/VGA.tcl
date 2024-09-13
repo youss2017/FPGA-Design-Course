@@ -58,7 +58,7 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache C:/Users/youssef/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21932-DESKTOP-339EFSV/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/youssef/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-36720-DESKTOP-339EFSV/incrSyn
 set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
@@ -76,7 +76,18 @@ set_property ip_output_repo c:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/V
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA.v
+read_verilog -library xil_defaultlib {
+  C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Ball.v
+  C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ButtonCounter.v
+  C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v
+  C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/KeyboardInput.v
+  C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v
+  C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/RGBDriver.v
+  C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v
+  C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/SegmentDriver.v
+  C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA_Driver.v
+  C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA.v
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

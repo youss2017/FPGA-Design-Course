@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Sep  8 21:23:45 2024
+# Process ID: 8568
+# Current directory: C:/Users/youssef/Desktop/DigitalSystems/PS2Keyboard/PS2Keyboard.runs/impl_1
+# Command line: vivado.exe -log main.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source main.tcl -notrace
+# Log file: C:/Users/youssef/Desktop/DigitalSystems/PS2Keyboard/PS2Keyboard.runs/impl_1/main.vdi
+# Journal file: C:/Users/youssef/Desktop/DigitalSystems/PS2Keyboard/PS2Keyboard.runs/impl_1\vivado.jou
+# Running On        :DESKTOP-339EFSV
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 5 3600 6-Core Processor              
+# CPU Frequency     :4342 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :51481 MB
+# Swap memory       :3221 MB
+# Total Virtual     :54702 MB
+# Available Virtual :18846 MB
+#-----------------------------------------------------------
+source main.tcl -notrace

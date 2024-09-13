@@ -22,114 +22,74 @@
 
 module VGA (
     input wire clk,
-    output reg [3:0] RED,
-    output reg [3:0] GREEN,
-    output reg [3:0] BLUE,
-    output reg HORIZ_SYNC,
-    output reg VERT_SYNC);    
+    input wire btn1,
+    input wire btnUp,
+    input wire btnDown,
+    input wire psclk, // This is PS/2 clock, it is PIN C17
+    input wire psdata, // This is PS/2 data, it is PIN B17
+    output wire [3:0] RED,
+    output wire [3:0] GREEN,
+    output wire [3:0] BLUE,
+    output wire HORIZ_SYNC,
+    output wire VERT_SYNC,
+    output wire [3:0] anode,
+    output reg [7:0] segement
+);    
+          
+    wire [3:0] digit1;
+    wire btn_clk;
+    wire [7:0] segementSignal1;
     
-    reg [1:0] divider; // divide clock to 25 MHz (we supposed to have 25.175 MHz)
-    reg [20:0] renderDivider; // divde to ~60 Hz, count to 1666666.66667 clocks
-    reg pixelClock; // this is the divided clock, goes high every 4 clock cycles (100/4 MHz)
-    reg renderClock;
+    /* VGA Driver signals */
+    wire [9:0] xCoord;
+    wire [9:0] yCoord;
+    wire inRenderRegion;
+    wire pixelClock;
     
-    reg [9:0] xCount; // 800: 680 pixels, 16 front porch, 96 hori sync, and 48 back porch -- used to count x pixels
-    reg [9:0] yCount; // 525: 480 rows, 10 front porch, 2 sync pulse, and 33 back porch   
+    // PS/2 keyboard signals
+    wire [7:0] scancode;
+    wire [7:0] prev_scancode;
+    wire dataReady;
+        
+    ClockDivider #(.TARGET_VALUE(1_500_000/2)) buttonClockDivider(.clk(clk), .out_clk(btn_clk));
+    ButtonCounter #(.MAX_DIGIT(7)) button1Counter(.btn(btn1), .btn_clk(btn_clk), .digit(digit1));
+    SegmentDriver driver1(.clk(clk), 
+                            .digit(digit1), 
+                            .segement(segementSignal1));
+                            
+     VGA_Driver displayDriver(.clk(clk),
+                              .xCoord(xCoord),
+                              .yCoord(yCoord),
+                              .hSync(HORIZ_SYNC),
+                              .vSync(VERT_SYNC),
+                              .inRenderRegion(inRenderRegion),
+                              .pixelClock(pixelClock));    
+    KeyboardInput PS2_KBD(.clk(clk),
+                          .psclk(psclk),
+                          .psdata(psdata),
+                          .scancode(scancode),
+                          .prev_scancode(prev_scancode),
+                          .dataReady(dataReady));
+
+    assign anode = 4'b0111;
     
-    reg xDirection;
-    reg [9:0] rectX;
-    reg [9:0] rectY;
-    
-    initial begin
-        divider <= 0;
-        xCount <= 0;
-        yCount <= 0;
-        pixelClock <= 0;
-        xDirection <= 0;
-        rectX <= 10;
-        rectY <= 125;
-        renderClock <= 0;
-    end
-    
-    // Divide the clock
+    // Drive the 7-segment display
     always @(posedge clk) begin
-        divider <= divider + 1;
-        renderDivider <= renderDivider + 1;
-        
-        // reset clock
-        if(divider < 3) begin
-            pixelClock <= 0;
-        end else begin
-            pixelClock <= 1;
-        end
-        
-        if(renderDivider >= 1666666) begin
-            renderDivider <= 0;
-            renderClock <= 1;
-        end else begin
-            renderClock <= 0;
-        end
-        
-    end
+        segement <= segementSignal1;
+    end    
     
-    // Counters
-    always @(posedge pixelClock) begin
-        
-        if(xCount == 799) begin
-            xCount <= 0;
-            
-            if(yCount == 524) begin
-                yCount <= 0;
-            end else begin
-                yCount <= yCount + 1;
-            end
-                
-        end else begin
-            xCount <= xCount + 1;
-        end
-        
-            
-    // Pixel Output
-    HORIZ_SYNC <= ~((xCount > (640 + 15)) & (xCount < (640 + 15 + 96)));
-    VERT_SYNC <= ~((yCount > (480 + 9)) & (yCount < (480 + 9 + 2)));
-        
-        // Are we in visible region?
-        if ((xCount < 640) & (yCount < 480) & HORIZ_SYNC & VERT_SYNC) begin
-        
-            if( (xCount >= rectX & xCount <= (rectX + 100)) &
-                (yCount >= rectY & yCount <= (rectY + 50))) begin
-                RED <= 4'b1100;
-                GREEN = (GREEN * 2) >> 4;
-                GREEN = GREEN + 1;
-                BLUE = (BLUE * GREEN) >> 4;
-                BLUE = BLUE + 1;
-            end else begin
-                RED <= 0;
-                GREEN <= 0;
-                BLUE <= 0;
-            end
-            
-        end else begin
-            RED <= 4'b0000;
-            GREEN <= 4'b0000;
-            BLUE <= 4'b0000;
-        end
-           
-    end
-    
-    always @(posedge renderClock) begin
-            if(xDirection == 0) begin
-                rectX = rectX + 1;
-            end else begin
-                rectX = rectX - 1;
-            end
-            
-            if(rectX == 0) begin
-                xDirection = 0;
-            end else if(rectX >= 639 - 100) begin
-                xDirection = 1;
-            end            
-    end
+    PingPong game(.clk(clk),
+                  .xCoord(xCoord),
+                  .yCoord(yCoord),
+                  .inRenderRegion(inRenderRegion),
+                  .prev_scancode(prev_scancode),
+                  .scancode(scancode),
+                  .kbdDataReady(dataReady),
+                  .btnUp(btnUp),
+                  .btnDown(btnDown),
+                  .RED(RED),
+                  .GREEN(GREEN),
+                  .BLUE(BLUE));
     
     
 endmodule

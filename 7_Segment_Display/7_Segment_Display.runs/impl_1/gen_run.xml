@@ -18,16 +18,21 @@
   <File Type="BITSTR-MMI" Name="display.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="display_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-SYSDEF" Name="display.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="display_methodology_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="display.ltx"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="NPI_FILE" Name="display.npi"/>
   <File Type="OPT-DRC" Name="display_drc_opted.rpt"/>
+  <File Type="RBD_FILE" Name="display.rbd"/>
   <File Type="OPT-HWDEF" Name="display.hwdef"/>
   <File Type="PLACE-IO" Name="display_io_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="display_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="display_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="display_control_sets_placed.rpt"/>
+  <File Type="ROUTE-RQS" Name="display_routed.rqs"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="display_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="display_postroute_physopted.rqs"/>
   <File Type="ROUTE-DRC" Name="display_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="display_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="display_power_routed.rpx"/>
@@ -55,17 +60,12 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="display_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="display_bus_skew_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="display_bus_skew_postroute_physopted.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="display_methodology_drc_routed.pb"/>
   <File Type="ROUTE-DRC-RPX" Name="display_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="display_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="display.pdi"/>
   <File Type="RCFI_FILE" Name="display.rcfi"/>
   <File Type="CFI_FILE" Name="display.cfi"/>
   <File Type="RNPI_FILE" Name="display.rnpi"/>
-  <File Type="NPI_FILE" Name="display.npi"/>
-  <File Type="RBD_FILE" Name="display.rbd"/>
-  <File Type="ROUTE-RQS" Name="display_routed.rqs"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="display_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
@@ -156,5 +156,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

@@ -63,3 +63,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports btnUp]
 
 set_property PACKAGE_PIN U17 [get_ports btnDown]
 set_property IOSTANDARD LVCMOS33 [get_ports btnDown]
+
+set_property PACKAGE_PIN C17 [get_ports psclk]
+set_property PACKAGE_PIN B17 [get_ports psdata]
+set_property IOSTANDARD LVCMOS33 [get_ports psclk]
+set_property IOSTANDARD LVCMOS33 [get_ports psdata]

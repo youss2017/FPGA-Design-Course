@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Wed Sep  4 02:10:04 2024
-# Process ID: 37652
+# Start of session at: Fri Sep 13 18:28:22 2024
+# Process ID: 37504
 # Current directory: C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.runs/synth_1
 # Command line: vivado.exe -log VGA.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGA.tcl
 # Log file: C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.runs/synth_1/VGA.vds
@@ -19,10 +19,10 @@
 # Host memory       :51481 MB
 # Swap memory       :3221 MB
 # Total Virtual     :54702 MB
-# Available Virtual :19368 MB
+# Available Virtual :18098 MB
 #-----------------------------------------------------------
 source VGA.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 491.539 ; gain = 200.539
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 491.055 ; gain = 200.062
 Command: read_checkpoint -auto_incremental -incremental C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/utils_1/imports/synth_1/VGA.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/utils_1/imports/synth_1/VGA.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -36,25 +36,97 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 39820
+INFO: [Synth 8-7075] Helper process launched with PID 5912
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1345.688 ; gain = 449.055
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1346.281 ; gain = 448.902
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'VGA' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ClockDivider' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v:24]
+	Parameter TARGET_VALUE bound to: 750000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ClockDivider' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v:24]
+INFO: [Synth 8-6157] synthesizing module 'ButtonCounter' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ButtonCounter.v:23]
+	Parameter MAX_DIGIT bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ButtonCounter' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ButtonCounter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'SegmentDriver' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/SegmentDriver.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/SegmentDriver.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'SegmentDriver' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/SegmentDriver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'VGA_Driver' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA_Driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ClockDivider__parameterized0' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v:24]
+	Parameter TARGET_VALUE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ClockDivider__parameterized0' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_Driver' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA_Driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardInput' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/KeyboardInput.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardInput' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/KeyboardInput.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PingPong' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RECT' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:23]
+	Parameter RED bound to: 4'b0111 
+	Parameter GREEN bound to: 4'b0111 
+	Parameter BLUE bound to: 4'b1000 
+	Parameter WIDTH bound to: 20 - type: integer 
+	Parameter HEIGHT bound to: 150 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RECT' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RECT__parameterized0' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:23]
+	Parameter RED bound to: 4'b1111 
+	Parameter GREEN bound to: 4'b0111 
+	Parameter BLUE bound to: 4'b0111 
+	Parameter WIDTH bound to: 20 - type: integer 
+	Parameter HEIGHT bound to: 150 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RECT__parameterized0' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Ball' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Ball.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RECT__parameterized1' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:23]
+	Parameter RED bound to: 255 - type: integer 
+	Parameter GREEN bound to: 255 - type: integer 
+	Parameter BLUE bound to: 255 - type: integer 
+	Parameter WIDTH bound to: 20 - type: integer 
+	Parameter HEIGHT bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RECT__parameterized1' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Ball' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Ball.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RGBDriver' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/RGBDriver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RGBDriver' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/RGBDriver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ClockDivider__parameterized1' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v:24]
+	Parameter TARGET_VALUE bound to: 1666666 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ClockDivider__parameterized1' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'PingPong' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'VGA' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA.v:23]
+WARNING: [Synth 8-6014] Unused sequential element green_reg was removed.  [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:44]
+WARNING: [Synth 8-6014] Unused sequential element blue_reg was removed.  [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:45]
+WARNING: [Synth 8-6014] Unused sequential element green_reg was removed.  [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:44]
+WARNING: [Synth 8-6014] Unused sequential element blue_reg was removed.  [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:45]
+WARNING: [Synth 8-3917] design VGA has port anode[3] driven by constant 0
+WARNING: [Synth 8-3917] design VGA has port anode[2] driven by constant 1
+WARNING: [Synth 8-3917] design VGA has port anode[1] driven by constant 1
+WARNING: [Synth 8-3917] design VGA has port anode[0] driven by constant 1
+WARNING: [Synth 8-7129] Port prev_scancode[7] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prev_scancode[6] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prev_scancode[5] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prev_scancode[4] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prev_scancode[3] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prev_scancode[2] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prev_scancode[1] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prev_scancode[0] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scancode[7] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scancode[6] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scancode[5] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scancode[4] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scancode[3] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scancode[2] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scancode[1] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scancode[0] in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port kbdDataReady in module PingPong is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module KeyboardInput is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1455.418 ; gain = 558.785
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1458.035 ; gain = 560.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1455.418 ; gain = 558.785
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1458.035 ; gain = 560.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1455.418 ; gain = 558.785
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1458.035 ; gain = 560.656
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1455.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1458.035 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -65,49 +137,56 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/VGA_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1548.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1559.938 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1548.125 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1559.938 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   11 Bit       Adders := 1     
-	   2 Input   10 Bit       Adders := 4     
-	   2 Input    4 Bit       Adders := 1     
-	   2 Input    2 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 10    
+	   2 Input   10 Bit       Adders := 6     
+	   3 Input   10 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    1 Bit       Adders := 1     
 +---Registers : 
-	               10 Bit    Registers := 3     
+	               22 Bit    Registers := 1     
+	               10 Bit    Registers := 5     
+	                8 Bit    Registers := 2     
 	                4 Bit    Registers := 4     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
 +---Muxes : 
+	   2 Input   10 Bit        Muxes := 1     
 	   3 Input    4 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 1     
+	   7 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 11    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -124,30 +203,32 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3917] design VGA has port GREEN[3] driven by constant 0
-WARNING: [Synth 8-3917] design VGA has port BLUE[3] driven by constant 0
-WARNING: [Synth 8-3917] design VGA has port BLUE[2] driven by constant 0
-WARNING: [Synth 8-3917] design VGA has port BLUE[1] driven by constant 0
+WARNING: [Synth 8-3917] design VGA has port anode[3] driven by constant 0
+WARNING: [Synth 8-3917] design VGA has port anode[2] driven by constant 1
+WARNING: [Synth 8-3917] design VGA has port anode[1] driven by constant 1
+WARNING: [Synth 8-3917] design VGA has port anode[0] driven by constant 1
+WARNING: [Synth 8-7129] Port psclk in module VGA is either unconnected or has no load
+WARNING: [Synth 8-7129] Port psdata in module VGA is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -165,37 +246,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -211,40 +292,41 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |    16|
-|3     |LUT1   |     6|
-|4     |LUT2   |    25|
-|5     |LUT3   |     6|
-|6     |LUT4   |    23|
-|7     |LUT5   |    17|
-|8     |LUT6   |    24|
-|9     |FDRE   |    60|
-|10    |IBUF   |     1|
-|11    |OBUF   |    14|
+|1     |BUFG   |     2|
+|2     |CARRY4 |    52|
+|3     |LUT1   |    19|
+|4     |LUT2   |    49|
+|5     |LUT3   |    50|
+|6     |LUT4   |    68|
+|7     |LUT5   |    42|
+|8     |LUT6   |    72|
+|9     |FDRE   |   119|
+|10    |FDSE   |     4|
+|11    |IBUF   |     4|
+|12    |OBUF   |    26|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 1548.125 ; gain = 558.785
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1548.125 ; gain = 651.492
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1559.938 ; gain = 560.656
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1559.938 ; gain = 662.559
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1548.125 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1559.938 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1548.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1559.938 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 8b64dc92
+Synth Design complete | Checksum: c3d38a65
 INFO: [Common 17-83] Releasing license: Synthesis
-24 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+51 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1548.125 ; gain = 1051.535
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1548.125 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 1559.938 ; gain = 1063.965
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1559.938 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.runs/synth_1/VGA.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file VGA_utilization_synth.rpt -pb VGA_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep  4 02:10:44 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 13 18:29:03 2024...
