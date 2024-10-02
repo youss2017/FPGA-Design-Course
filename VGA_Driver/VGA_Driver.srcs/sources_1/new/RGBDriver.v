@@ -35,6 +35,10 @@ module RGBDriver(
     input wire [3:0] GREEN2,
     input wire [3:0] BLUE2,
     
+    input wire [3:0] RED3,
+    input wire [3:0] GREEN3,
+    input wire [3:0] BLUE3,
+    
     output wire [3:0] RED,
     output wire [3:0] GREEN,
     output wire [3:0] BLUE
@@ -42,9 +46,9 @@ module RGBDriver(
 );
 
     wire [3:0] mask = { 4{inRenderRegion} };
-    assign RED = (RED0 | RED1 | RED2) & mask;
-    assign GREEN = (GREEN0 | GREEN1 | GREEN2) & mask;
-    assign BLUE = (BLUE0 | BLUE1 | BLUE2) & mask;
+    assign RED = (RED0 | RED1 | RED2 | RED3) & mask;
+    assign GREEN = (GREEN0 | GREEN1 | GREEN2 | GREEN3) & mask;
+    assign BLUE = (BLUE0 | BLUE1 | BLUE2 | BLUE3) & mask;
         
 
 endmodule

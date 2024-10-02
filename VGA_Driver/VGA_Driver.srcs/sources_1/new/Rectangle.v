@@ -24,10 +24,10 @@ module RECT
 #(parameter RED = 80, GREEN = 90, BLUE = 39, WIDTH = 30, HEIGHT = 30)
 (
     input wire clk,
-    input wire [9:0] xCoord,
-    input wire [9:0] yCoord,
-    input wire [9:0] xPosition,
-    input wire [9:0] yPosition,
+    input wire [10:0] xCoord,
+    input wire [10:0] yCoord,
+    input wire [10:0] xPosition,
+    input wire [10:0] yPosition,
     output reg [3:0] red,
     output reg [3:0] green,
     output reg [3:0] blue

@@ -1,0 +1,26 @@
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_8 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot BitmapSim_behav xil_defaultlib.BitmapSim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 6 for port 'bmpOffset' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sim_1/new/BitmapSim.v:58]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 11 for port 'xPosition' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sim_1/new/BitmapSim.v:61]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 11 for port 'yPosition' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sim_1/new/BitmapSim.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ena' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/BitmapBlock.v:57]
+WARNING: [VRFC 10-5021] port 'dina' is not connected on this instance [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/BitmapBlock.v:57]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_8.blk_mem_gen_v8_4_8_output_stage(...
+Compiling module blk_mem_gen_v8_4_8.blk_mem_gen_v8_4_8_output_stage(...
+Compiling module blk_mem_gen_v8_4_8.blk_mem_gen_v8_4_8_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_8.blk_mem_gen_v8_4_8_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_8.blk_mem_gen_v8_4_8(C_FAMILY="art...
+Compiling module xil_defaultlib.blk_mem_gen_0
+Compiling module xil_defaultlib.BitmapBlock
+Compiling module xil_defaultlib.BitmapSim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot BitmapSim_behav

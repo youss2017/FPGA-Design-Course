@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Fri Sep 13 18:28:22 2024
-# Process ID: 37504
+# Start of session at: Tue Sep 17 15:18:53 2024
+# Process ID: 38140
 # Current directory: C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.runs/synth_1
 # Command line: vivado.exe -log VGA.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGA.tcl
 # Log file: C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.runs/synth_1/VGA.vds
@@ -19,15 +19,18 @@
 # Host memory       :51481 MB
 # Swap memory       :3221 MB
 # Total Virtual     :54702 MB
-# Available Virtual :18098 MB
+# Available Virtual :11349 MB
 #-----------------------------------------------------------
 source VGA.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 491.055 ; gain = 200.062
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 491.516 ; gain = 199.793
 Command: read_checkpoint -auto_incremental -incremental C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/utils_1/imports/synth_1/VGA.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/utils_1/imports/synth_1/VGA.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top VGA -part xc7a35tcpg236-1
 Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+c:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
@@ -36,9 +39,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5912
+INFO: [Synth 8-7075] Helper process launched with PID 3308
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1346.281 ; gain = 448.902
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1355.090 ; gain = 449.102
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'VGA' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA.v:23]
 INFO: [Synth 8-6157] synthesizing module 'ClockDivider' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v:24]
@@ -50,11 +53,13 @@ INFO: [Synth 8-6155] done synthesizing module 'ButtonCounter' (0#1) [C:/Users/yo
 INFO: [Synth 8-6157] synthesizing module 'SegmentDriver' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/SegmentDriver.v:23]
 INFO: [Synth 8-226] default block is never used [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/SegmentDriver.v:30]
 INFO: [Synth 8-6155] done synthesizing module 'SegmentDriver' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/SegmentDriver.v:23]
-INFO: [Synth 8-6157] synthesizing module 'VGA_Driver' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA_Driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'VGA_Driver' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA_Driver.v:35]
 INFO: [Synth 8-6157] synthesizing module 'ClockDivider__parameterized0' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v:24]
-	Parameter TARGET_VALUE bound to: 1 - type: integer 
+	Parameter TARGET_VALUE bound to: 3 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'ClockDivider__parameterized0' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'VGA_Driver' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA_Driver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_Driver' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA_Driver.v:35]
+WARNING: [Synth 8-689] width (10) of port connection 'xCoord' does not match port width (11) of module 'VGA_Driver' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA.v:61]
+WARNING: [Synth 8-689] width (10) of port connection 'yCoord' does not match port width (11) of module 'VGA_Driver' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA.v:62]
 INFO: [Synth 8-6157] synthesizing module 'KeyboardInput' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/KeyboardInput.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'KeyboardInput' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/KeyboardInput.v:23]
 INFO: [Synth 8-6157] synthesizing module 'PingPong' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:23]
@@ -65,6 +70,9 @@ INFO: [Synth 8-6157] synthesizing module 'RECT' [C:/Users/youssef/Desktop/Digita
 	Parameter WIDTH bound to: 20 - type: integer 
 	Parameter HEIGHT bound to: 150 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'RECT' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:23]
+WARNING: [Synth 8-689] width (10) of port connection 'xCoord' does not match port width (11) of module 'RECT' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:58]
+WARNING: [Synth 8-689] width (10) of port connection 'yCoord' does not match port width (11) of module 'RECT' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:59]
+WARNING: [Synth 8-689] width (10) of port connection 'yPosition' does not match port width (11) of module 'RECT' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:61]
 INFO: [Synth 8-6157] synthesizing module 'RECT__parameterized0' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:23]
 	Parameter RED bound to: 4'b1111 
 	Parameter GREEN bound to: 4'b0111 
@@ -72,6 +80,9 @@ INFO: [Synth 8-6157] synthesizing module 'RECT__parameterized0' [C:/Users/yousse
 	Parameter WIDTH bound to: 20 - type: integer 
 	Parameter HEIGHT bound to: 150 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'RECT__parameterized0' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:23]
+WARNING: [Synth 8-689] width (10) of port connection 'xCoord' does not match port width (11) of module 'RECT__parameterized0' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:68]
+WARNING: [Synth 8-689] width (10) of port connection 'yCoord' does not match port width (11) of module 'RECT__parameterized0' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:69]
+WARNING: [Synth 8-689] width (10) of port connection 'yPosition' does not match port width (11) of module 'RECT__parameterized0' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:71]
 INFO: [Synth 8-6157] synthesizing module 'Ball' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Ball.v:23]
 INFO: [Synth 8-6157] synthesizing module 'RECT__parameterized1' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:23]
 	Parameter RED bound to: 255 - type: integer 
@@ -81,52 +92,228 @@ INFO: [Synth 8-6157] synthesizing module 'RECT__parameterized1' [C:/Users/yousse
 	Parameter HEIGHT bound to: 20 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'RECT__parameterized1' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Ball' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Ball.v:23]
+WARNING: [Synth 8-689] width (10) of port connection 'xCoord' does not match port width (11) of module 'Ball' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:78]
+WARNING: [Synth 8-689] width (10) of port connection 'yCoord' does not match port width (11) of module 'Ball' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:79]
+WARNING: [Synth 8-689] width (10) of port connection 'leftPadY' does not match port width (11) of module 'Ball' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:82]
+WARNING: [Synth 8-689] width (10) of port connection 'rightPadY' does not match port width (11) of module 'Ball' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:85]
 INFO: [Synth 8-6157] synthesizing module 'RGBDriver' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/RGBDriver.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'RGBDriver' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/RGBDriver.v:23]
 INFO: [Synth 8-6157] synthesizing module 'ClockDivider__parameterized1' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v:24]
 	Parameter TARGET_VALUE bound to: 1666666 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'ClockDivider__parameterized1' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v:24]
+INFO: [Synth 8-6157] synthesizing module 'BitmapBlock' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/BitmapBlock.v:26]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [c:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.gen/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:70]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: blk_mem_gen_0.mif - type: string 
+	Parameter C_INIT_FILE bound to: blk_mem_gen_0.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 4 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 4 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 50 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 50 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 6 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 4 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 4 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 50 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 50 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 6 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.37365 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_8' declared at 'c:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.gen/sources_1/ip/blk_mem_gen_0/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195208' bound to instance 'U0' of component 'blk_mem_gen_v8_4_8' [c:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.gen/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:236]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (0#1) [c:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.gen/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:70]
+WARNING: [Synth 8-7071] port 'dina' of module 'blk_mem_gen_0' is unconnected for instance 'fontROM' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/BitmapBlock.v:57]
+WARNING: [Synth 8-7023] instance 'fontROM' of module 'blk_mem_gen_0' has 6 connections declared, but only 5 given [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/BitmapBlock.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'BitmapBlock' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/BitmapBlock.v:26]
+WARNING: [Synth 8-689] width (10) of port connection 'xCoord' does not match port width (11) of module 'BitmapBlock' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:140]
+WARNING: [Synth 8-689] width (10) of port connection 'yCoord' does not match port width (11) of module 'BitmapBlock' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:141]
+WARNING: [Synth 8-689] width (10) of port connection 'xCoord' does not match port width (11) of module 'BitmapBlock' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:150]
+WARNING: [Synth 8-689] width (10) of port connection 'yCoord' does not match port width (11) of module 'BitmapBlock' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:151]
+WARNING: [Synth 8-689] width (10) of port connection 'xCoord' does not match port width (11) of module 'BitmapBlock' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:160]
+WARNING: [Synth 8-689] width (10) of port connection 'yCoord' does not match port width (11) of module 'BitmapBlock' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:161]
+WARNING: [Synth 8-689] width (10) of port connection 'xCoord' does not match port width (11) of module 'BitmapBlock' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:170]
+WARNING: [Synth 8-689] width (10) of port connection 'yCoord' does not match port width (11) of module 'BitmapBlock' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:171]
 INFO: [Synth 8-6155] done synthesizing module 'PingPong' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/PingPong.v:23]
+WARNING: [Synth 8-689] width (4) of port connection 'digit1' does not match port width (6) of module 'PingPong' [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA.v:94]
 INFO: [Synth 8-6155] done synthesizing module 'VGA' (0#1) [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA.v:23]
 WARNING: [Synth 8-6014] Unused sequential element green_reg was removed.  [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:44]
 WARNING: [Synth 8-6014] Unused sequential element blue_reg was removed.  [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:45]
 WARNING: [Synth 8-6014] Unused sequential element green_reg was removed.  [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:44]
 WARNING: [Synth 8-6014] Unused sequential element blue_reg was removed.  [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Rectangle.v:45]
-WARNING: [Synth 8-3917] design VGA has port anode[3] driven by constant 0
-WARNING: [Synth 8-3917] design VGA has port anode[2] driven by constant 1
-WARNING: [Synth 8-3917] design VGA has port anode[1] driven by constant 1
-WARNING: [Synth 8-3917] design VGA has port anode[0] driven by constant 1
-WARNING: [Synth 8-7129] Port prev_scancode[7] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prev_scancode[6] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prev_scancode[5] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prev_scancode[4] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prev_scancode[3] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prev_scancode[2] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prev_scancode[1] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prev_scancode[0] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scancode[7] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scancode[6] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scancode[5] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scancode[4] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scancode[3] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scancode[2] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scancode[1] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scancode[0] in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port kbdDataReady in module PingPong is either unconnected or has no load
-WARNING: [Synth 8-7129] Port clk in module KeyboardInput is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLKB in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[3] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[2] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[1] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[0] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR_I in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR_I in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[5] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[4] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[3] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[2] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[1] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[0] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[35] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[34] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[33] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[32] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[31] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[30] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[29] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[28] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[27] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[26] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[25] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[24] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[23] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[22] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[21] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[20] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[19] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[18] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[17] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[16] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[15] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[14] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[13] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[12] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[11] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[10] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[9] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[8] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[7] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[6] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[5] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[4] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[3] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[2] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[1] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB[0] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRA in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLKB in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRB in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENB in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REGCEB in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[0] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[8] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[7] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[6] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[5] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[4] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[3] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[2] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[1] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDRB[0] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[35] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[34] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[33] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[32] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[31] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[30] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[29] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[28] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[27] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[26] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[25] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[24] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[23] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[22] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[21] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[20] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[19] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[18] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[17] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[16] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[15] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[14] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[13] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[12] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[11] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[10] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[9] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[8] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[7] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[6] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[5] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[4] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[3] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[2] in module blk_mem_gen_prim_wrapper_init is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1458.035 ; gain = 560.656
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1722.129 ; gain = 816.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1458.035 ; gain = 560.656
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1722.129 ; gain = 816.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1458.035 ; gain = 560.656
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1722.129 ; gain = 816.141
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1458.035 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1722.129 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -135,33 +322,39 @@ Parsing XDC File [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.
 Finished Parsing XDC File [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/constrs_1/new/constraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/VGA_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/VGA_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1559.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1766.695 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1559.938 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1766.695 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for game/bmp0/fontROM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for game/bmp1/fontROM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for game/bmp2/fontROM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for game/bmp3/fontROM. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -169,23 +362,29 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   32 Bit       Adders := 2     
-	   2 Input   11 Bit       Adders := 10    
-	   2 Input   10 Bit       Adders := 6     
-	   3 Input   10 Bit       Adders := 3     
+	   2 Input   12 Bit       Adders := 19    
+	   2 Input   11 Bit       Adders := 5     
+	   3 Input   11 Bit       Adders := 3     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
 	   2 Input    4 Bit       Adders := 3     
-	   2 Input    1 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
+	   3 Input    2 Bit       Adders := 4     
 +---Registers : 
 	               22 Bit    Registers := 1     
-	               10 Bit    Registers := 5     
+	               11 Bit    Registers := 4     
+	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 2     
-	                4 Bit    Registers := 4     
+	                4 Bit    Registers := 12    
 	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 10    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
 +---Muxes : 
+	   2 Input   11 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 1     
 	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
 	   7 Input    2 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 1     
 	   2 Input    1 Bit        Muxes := 11    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -203,32 +402,27 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3917] design VGA has port anode[3] driven by constant 0
-WARNING: [Synth 8-3917] design VGA has port anode[2] driven by constant 1
-WARNING: [Synth 8-3917] design VGA has port anode[1] driven by constant 1
-WARNING: [Synth 8-3917] design VGA has port anode[0] driven by constant 1
-WARNING: [Synth 8-7129] Port psclk in module VGA is either unconnected or has no load
-WARNING: [Synth 8-7129] Port psdata in module VGA is either unconnected or has no load
+WARNING: [Synth 8-3936] Found unconnected internal register 'PS2_KBD/scancode_sr_reg' and it is trimmed from '22' to '21' bits. [C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/KeyboardInput.v:40]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -246,37 +440,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -289,44 +483,46 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     2|
-|2     |CARRY4 |    52|
-|3     |LUT1   |    19|
-|4     |LUT2   |    49|
-|5     |LUT3   |    50|
-|6     |LUT4   |    68|
-|7     |LUT5   |    42|
-|8     |LUT6   |    72|
-|9     |FDRE   |   119|
-|10    |FDSE   |     4|
-|11    |IBUF   |     4|
-|12    |OBUF   |    26|
-+------+-------+------+
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |CARRY4   |    66|
+|3     |LUT1     |    30|
+|4     |LUT2     |    84|
+|5     |LUT3     |    61|
+|6     |LUT4     |    96|
+|7     |LUT5     |    55|
+|8     |LUT6     |   106|
+|9     |MUXF7    |     1|
+|10    |RAMB18E1 |     4|
+|11    |FDRE     |   156|
+|12    |FDSE     |     4|
+|13    |IBUF     |     4|
+|14    |OBUF     |    26|
++------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 1766.695 ; gain = 860.707
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1559.938 ; gain = 560.656
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1559.938 ; gain = 662.559
+Synthesis finished with 0 errors, 0 critical warnings and 161 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1766.695 ; gain = 816.141
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1766.695 ; gain = 860.707
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1559.938 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1766.695 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 71 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1559.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1766.695 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: c3d38a65
+Synth Design complete | Checksum: ac2c6da6
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
+59 Infos, 130 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 1559.938 ; gain = 1063.965
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1559.938 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 1766.695 ; gain = 1262.312
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1766.695 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.runs/synth_1/VGA.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file VGA_utilization_synth.rpt -pb VGA_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Sep 13 18:29:03 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 17 15:19:45 2024...

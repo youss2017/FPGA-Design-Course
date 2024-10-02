@@ -27,27 +27,27 @@ module Ball
 (
     input wire clk,
     input wire logicClock,
-    input wire [9:0] xCoord,
-    input wire [9:0] yCoord,
+    input wire [10:0] xCoord,
+    input wire [10:0] yCoord,
     
-    input wire [9:0] leftPadX,
-    input wire [9:0] leftPadY,
+    input wire [10:0] leftPadX,
+    input wire [10:0] leftPadY,
     
-    input wire [9:0] rightPadX,
-    input wire [9:0] rightPadY,
+    input wire [10:0] rightPadX,
+    input wire [10:0] rightPadY,
     
     output wire [3:0] RED,
     output wire [3:0] GREEN,
     output wire [3:0] BLUE
 );
 
-    reg [9:0] ballXY [0:1];
+    reg [10:0] ballXY [0:1];
     reg [3:0] ballSpeedXY [0:1];
     reg ballDirXY [0:1]; // 0 is positive and 1 is negative
 
     // See Comment Segment 1 to understand the importance of this.
-    wire [9:0] leftPadRegion_Reference;
-    wire [9:0] rightPadRegion_Reference;
+    wire [10:0] leftPadRegion_Reference;
+    wire [10:0] rightPadRegion_Reference;
     assign leftPadRegion_Reference = (ballXY[1] - leftPadY);
     assign rightPadRegion_Reference = (ballXY[1] - rightPadY);
 
@@ -74,7 +74,7 @@ module Ball
 
         ballXY[0] = ballDirXY[0] ? (ballXY[0] - ballSpeedXY[0]) : (ballXY[0] + ballSpeedXY[0]);
         ballXY[1] = ballDirXY[1] ? (ballXY[1] - ballSpeedXY[1]) : (ballXY[1] + ballSpeedXY[1]);
-        
+                
         if (ballXY[0] < 0) ballDirXY[0] <= 0;
         if (ballXY[1] < 0) ballDirXY[1] <= 0;
         if (ballXY[0] > 639) ballDirXY[0] <= 1;
@@ -137,8 +137,10 @@ module Ball
         end
 
         // Did we hit right pad?
-        if(ballXY[0] >= rightPadX && 
-            ballXY[0] <= (rightPadX + PADDLE_WIDTH) &&
+        // hmmmm, ballXY[0] is the left x coordinate of the "ball"
+        // we need to compare the right x coordinate instead when colliding with the right pad.
+        if ((ballXY[0] + BALL_WIDTH) >= rightPadX && 
+            (ballXY[0] + BALL_WIDTH) <= (rightPadX + PADDLE_WIDTH) &&
             (ballXY[1] >= rightPadY || ballXY[1] >= (rightPadX - BALL_HEIGHT)) && 
             ballXY[1] <= (rightPadY + PADDLE_HEIGHT)) begin
             

@@ -63,7 +63,8 @@ module VGA (
                               .hSync(HORIZ_SYNC),
                               .vSync(VERT_SYNC),
                               .inRenderRegion(inRenderRegion),
-                              .pixelClock(pixelClock));    
+                              .pixelClock(pixelClock));
+                              
     KeyboardInput PS2_KBD(.clk(clk),
                           .psclk(psclk),
                           .psdata(psdata),
@@ -71,7 +72,7 @@ module VGA (
                           .prev_scancode(prev_scancode),
                           .dataReady(dataReady));
 
-    assign anode = 4'b0111;
+    assign anode = digit1; //4'b0111;
     
     // Drive the 7-segment display
     always @(posedge clk) begin
@@ -89,7 +90,8 @@ module VGA (
                   .btnDown(btnDown),
                   .RED(RED),
                   .GREEN(GREEN),
-                  .BLUE(BLUE));
+                  .BLUE(BLUE),
+                  .digit1(digit1));
     
     
 endmodule

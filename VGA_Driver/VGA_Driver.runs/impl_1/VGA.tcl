@@ -108,7 +108,7 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
   set_param checkpoint.writeSynthRtdsInDcp 1
-  set_param synth.incrementalSynthesisCache C:/Users/youssef/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-36720-DESKTOP-339EFSV/incrSyn
+  set_param synth.incrementalSynthesisCache C:/Users/youssef/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-35464-DESKTOP-339EFSV/incrSyn
   set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
@@ -121,9 +121,11 @@ OPTRACE "set parameters" START { }
   set_property parent.project_path C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.xpr [current_project]
   set_property ip_output_repo C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.runs/synth_1/VGA.dcp
+  read_ip -quiet c:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
@@ -289,6 +291,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   catch { write_mem_info -force -no_partial_mmi VGA.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }

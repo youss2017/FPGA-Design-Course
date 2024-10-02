@@ -58,7 +58,7 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache C:/Users/youssef/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-36720-DESKTOP-339EFSV/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/youssef/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-35464-DESKTOP-339EFSV/incrSyn
 set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
@@ -68,16 +68,20 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.cache/wt [current_project]
 set_property parent.project_path C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.xpr [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files C:/Users/youssef/Desktop/DigitalSystems/FPGA_Font_4x5/font_4x5.coe
 read_verilog -library xil_defaultlib {
   C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/Ball.v
+  C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/BitmapBlock.v
   C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ButtonCounter.v
   C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/ClockDivider.v
   C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/KeyboardInput.v
@@ -88,6 +92,9 @@ read_verilog -library xil_defaultlib {
   C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA_Driver.v
   C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/new/VGA.v
 }
+read_ip -quiet c:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -100,6 +107,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/constrs_1/new/constraints.xdc
 set_property used_in_implementation false [get_files C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/constrs_1/new/constraints.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental C:/Users/youssef/Desktop/DigitalSystems/VGA_Driver/VGA_Driver.srcs/utils_1/imports/synth_1/VGA.dcp
