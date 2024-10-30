@@ -38,8 +38,7 @@ module top_module(
     assign anode = 4'b1110;
     
     always @(*) begin
-        if(error) scancode_led <= 0;
-        else scancode_led <= bcd;
+        scancode_led <= bcd;
     end
     
     ps2_keyboard kbd(.clk(clk),
@@ -55,6 +54,7 @@ module top_module(
                           
    always@ (posedge clk) begin
         if(dataReady && scancode != 'hF0) begin
+            error = 0;
             case (scancode)
                 'h16: bcd <= 4'b0001; // 1
                 'h1E: bcd <= 4'b0010; // 2
@@ -66,15 +66,12 @@ module top_module(
                 'h3E: bcd <= 4'b1000; // 8
                 'h46: bcd <= 4'b1001; // 9
                 'h45: bcd <= 4'b0000; // 0
-                default: bcd <= 4'b1111; // anything else
+                default: begin
+                    bcd <= 4'b0000; // anything else
+                end
             endcase
         end
         
-        if(bcd == 4'b1111) begin
-            error <= 1;
-        end else begin
-            error <= 0;
-        end
    end
     
 endmodule
