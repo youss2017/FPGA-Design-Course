@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Wed Oct 30 11:54:55 2024
-# Process ID: 27536
+# Start of session at: Mon Nov  4 16:02:46 2024
+# Process ID: 42928
 # Current directory: C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.runs/blk_mem_gen_0_synth_1
 # Command line: vivado.exe -log blk_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
 # Log file: C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
@@ -19,6 +19,6 @@
 # Host memory       :51481 MB
 # Swap memory       :8321 MB
 # Total Virtual     :59802 MB
-# Available Virtual :32014 MB
+# Available Virtual :27146 MB
 #-----------------------------------------------------------
 source blk_mem_gen_0.tcl -notrace

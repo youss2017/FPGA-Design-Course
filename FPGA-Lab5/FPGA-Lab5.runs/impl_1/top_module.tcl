@@ -99,7 +99,6 @@ OPTRACE "impl_1" END { }
 
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
-set_msg_config  -id {17-179}  -suppress 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -125,7 +124,7 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.runs/synth_1/top_module.dcp
-  read_ip -quiet c:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  read_ip -quiet C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
