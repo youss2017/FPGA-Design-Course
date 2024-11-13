@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Mon Nov  4 16:12:31 2024
+| Date         : Tue Nov 12 22:49:04 2024
 | Host         : DESKTOP-339EFSV running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_module_control_sets_placed.rpt
 | Design       : top_module
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    16 |
-|    Minimum number of control sets                        |    16 |
+| Total control sets                                       |    13 |
+|    Minimum number of control sets                        |    13 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |    56 |
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    16 |
-| >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     3 |
-| >= 6 to < 8        |     2 |
-| >= 8 to < 10       |     3 |
-| >= 10 to < 12      |     3 |
-| >= 12 to < 14      |     2 |
+| Total control sets |    13 |
+| >= 0 to < 4        |     6 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     2 |
+| >= 16              |     1 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,37 +58,34 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              38 |           18 |
+| No           | No                    | No                     |              55 |           23 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              27 |           10 |
-| Yes          | No                    | No                     |              41 |           21 |
+| No           | Yes                   | No                     |              23 |           10 |
+| Yes          | No                    | No                     |               7 |            3 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              38 |           14 |
+| Yes          | Yes                   | No                     |               3 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------------+----------------------------------+----------------------------------+------------------+----------------+--------------+
-|             Clock Signal             |           Enable Signal          |         Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
-+--------------------------------------+----------------------------------+----------------------------------+------------------+----------------+--------------+
-|  swap_buffers                        |                                  |                                  |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                       | ka0/write_data[3]_i_1_n_0        |                                  |                2 |              4 |         2.00 |
-| ~kclk_IBUF_BUFG                      |                                  | ftrig/kbd/clear                  |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                       | ka0/read_x[9]_i_2_n_0            | ka0/read_y[10]_i_1_n_0           |                3 |              5 |         1.67 |
-|  clk_IBUF_BUFG                       | ka0/read_x[9]_i_2_n_0            | ka0/read_y[8]_i_1_n_0            |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG                       | ka0/x_counter[3]_i_1_n_0         | ka0/data_sum[6]_i_1_n_0          |                2 |              7 |         3.50 |
-|  clk_IBUF_BUFG                       | ftrig/trigger_state              |                                  |                6 |              8 |         1.33 |
-|  clk_IBUF_BUFG                       | ka0/read_x[9]_i_2_n_0            | ka0/read_x[9]_i_1_n_0            |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG                       | ka0/x_counter[3]_i_1_n_0         |                                  |                4 |              8 |         2.00 |
-|  clk_IBUF_BUFG                       | ka0/state_reg[1]_0               |                                  |                5 |             10 |         2.00 |
-|  displayDriver/pixelClockDivider/CLK |                                  | displayDriver/xCoord[10]_i_1_n_0 |                3 |             11 |         3.67 |
-|  displayDriver/pixelClockDivider/CLK | displayDriver/xCoord[10]_i_1_n_0 |                                  |                4 |             11 |         2.75 |
-|  clk_IBUF_BUFG                       |                                  | displayDriver/yCoord_reg[7]_0    |                6 |             12 |         2.00 |
-|  clk_IBUF_BUFG                       | ka0/state_reg[1]_0               | ka0/write_x[0]_i_1_n_0           |                4 |             12 |         3.00 |
-|  clk_IBUF_BUFG                       |                                  |                                  |               10 |             18 |         1.80 |
-| ~kclk_IBUF_BUFG                      |                                  |                                  |                7 |             20 |         2.86 |
-+--------------------------------------+----------------------------------+----------------------------------+------------------+----------------+--------------+
++---------------------------------------------+----------------------------------+----------------------------------+------------------+----------------+--------------+
+|                 Clock Signal                |           Enable Signal          |         Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------------------+----------------------------------+----------------------------------+------------------+----------------+--------------+
+|  i_write_mode__0                            |                                  |                                  |                1 |              1 |         1.00 |
+|  b0/current_state_reg_n_0_[0]               |                                  |                                  |                1 |              1 |         1.00 |
+|  displayDriver/pixelClockDivider/pixelClock |                                  |                                  |                1 |              1 |         1.00 |
+|  b0/next_state_reg[1]_i_2_n_0               |                                  |                                  |                1 |              2 |         2.00 |
+|  b0/FSM_onehot_current_state_reg[0][0]      |                                  |                                  |                1 |              3 |         3.00 |
+|  displayDriver/pixelClockDivider/pixelClock | displayDriver/xCoord[10]_i_1_n_0 | displayDriver/yCoord[10]_i_1_n_0 |                2 |              3 |         1.50 |
+|  displayDriver/pixelClockDivider/pixelClock | displayDriver/xCoord[10]_i_1_n_0 |                                  |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG                              |                                  |                                  |                3 |              8 |         2.67 |
+|  b0/FSM_onehot_current_state_reg[0]_0[0]    |                                  |                                  |                3 |              8 |         2.67 |
+|  b0/E[0]                                    |                                  |                                  |                5 |             11 |         2.20 |
+|  displayDriver/pixelClockDivider/pixelClock |                                  | displayDriver/xCoord[10]_i_1_n_0 |                5 |             11 |         2.20 |
+|  clk_IBUF_BUFG                              |                                  | displayDriver/yCoord_reg[9]_0    |                5 |             12 |         2.40 |
+| ~b0/current_state_reg_n_0_[0]               |                                  |                                  |                7 |             20 |         2.86 |
++---------------------------------------------+----------------------------------+----------------------------------+------------------+----------------+--------------+
 
 

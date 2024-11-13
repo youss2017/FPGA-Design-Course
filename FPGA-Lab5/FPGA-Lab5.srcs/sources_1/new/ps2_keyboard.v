@@ -22,6 +22,7 @@
 
 module ps2_keyboard(
     input wire clk,
+    input wire reset,
     input wire psclk,
     input wire psdata,
     output wire [7:0] scancode,
@@ -58,15 +59,19 @@ module ps2_keyboard(
 
     initial scancode_sr <= 0;
 
-    always @(posedge ~psclk) begin
-        scancode_sr <= (scancode_sr << 1) | psdata;
-        counter = counter + 1;
-        if(counter == 11) begin
-            counter <= 0;
-            dataReady <= 1;
-        end
-        else begin
-            dataReady <= 0;
+    always @(posedge ~psclk, posedge reset) begin
+        if (reset) begin
+            scancode_sr <= 0;
+        end else begin
+            scancode_sr <= (scancode_sr << 1) | psdata;
+            counter = counter + 1;
+            if(counter == 11) begin
+                counter <= 0;
+                dataReady <= 1;
+            end
+            else begin
+                dataReady <= 0;
+            end
         end
     end
 

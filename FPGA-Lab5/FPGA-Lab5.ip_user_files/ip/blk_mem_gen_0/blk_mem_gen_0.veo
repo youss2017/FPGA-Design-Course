@@ -56,13 +56,15 @@
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 blk_mem_gen_0 your_instance_name (
   .clka(clka),    // input wire clka
-  .ena(ena),      // input wire ena
   .wea(wea),      // input wire [0 : 0] wea
-  .addra(addra),  // input wire [17 : 0] addra
+  .addra(addra),  // input wire [15 : 0] addra
   .dina(dina),    // input wire [3 : 0] dina
+  .douta(douta),  // output wire [3 : 0] douta
   .clkb(clkb),    // input wire clkb
   .enb(enb),      // input wire enb
-  .addrb(addrb),  // input wire [17 : 0] addrb
+  .web(web),      // input wire [0 : 0] web
+  .addrb(addrb),  // input wire [15 : 0] addrb
+  .dinb(dinb),    // input wire [3 : 0] dinb
   .doutb(doutb)  // output wire [3 : 0] doutb
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------

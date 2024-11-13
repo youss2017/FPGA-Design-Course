@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Mon Nov  4 16:12:52 2024
+| Date             : Tue Nov 12 22:49:25 2024
 | Host             : DESKTOP-339EFSV running 64-bit major release  (build 9200)
 | Command          : report_power -file top_module_power_routed.rpt -pb top_module_power_summary_routed.pb -rpx top_module_power_routed.rpx
 | Design           : top_module
@@ -29,43 +29,41 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 27.988 (Junction temp exceeded!) |
-| Design Power Budget (W)  | Unspecified*                     |
-| Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 27.492                           |
-| Device Static (W)        | 0.496                            |
-| Effective TJA (C/W)      | 5.0                              |
-| Max Ambient (C)          | 0.0                              |
-| Junction Temperature (C) | 125.0                            |
-| Confidence Level         | Low                              |
-| Setting File             | ---                              |
-| Simulation Activity File | ---                              |
-| Design Nets Matched      | NA                               |
-+--------------------------+----------------------------------+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 3.494        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 3.411        |
+| Device Static (W)        | 0.083        |
+| Effective TJA (C/W)      | 5.0          |
+| Max Ambient (C)          | 67.5         |
+| Junction Temperature (C) | 42.5         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
 1.1 On-Chip Components
 ----------------------
 
-+-------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
-+-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     0.789 |      391 |       --- |             --- |
-|   LUT as Logic          |     0.699 |      170 |     20800 |            0.82 |
-|   Register              |     0.047 |      144 |     41600 |            0.35 |
-|   CARRY4                |     0.030 |       11 |      8150 |            0.13 |
-|   BUFG                  |     0.012 |        2 |        32 |            6.25 |
-|   LUT as Shift Register |     0.002 |        1 |      9600 |            0.01 |
-|   Others                |     0.000 |       42 |       --- |             --- |
-| Signals                 |     1.899 |      352 |       --- |             --- |
-| Block RAM               |     0.140 |       16 |        50 |           32.00 |
-| DSPs                    |     1.299 |        2 |        90 |            2.22 |
-| I/O                     |    23.365 |       25 |       106 |           23.58 |
-| Static Power            |     0.496 |          |           |                 |
-| Total                   |    27.988 |          |           |                 |
-+-------------------------+-----------+----------+-----------+-----------------+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |     0.211 |      246 |       --- |             --- |
+|   LUT as Logic |     0.191 |       89 |     20800 |            0.43 |
+|   Register     |     0.011 |       88 |     41600 |            0.21 |
+|   BUFG         |     0.006 |        1 |        32 |            3.13 |
+|   CARRY4       |     0.004 |        8 |      8150 |            0.10 |
+|   Others       |     0.000 |       28 |       --- |             --- |
+| Signals        |     0.408 |      197 |       --- |             --- |
+| Block RAM      |     0.733 |        8 |        50 |           16.00 |
+| I/O            |     2.060 |       16 |       106 |           15.09 |
+| Static Power   |     0.083 |          |           |                 |
+| Total          |     3.494 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -74,16 +72,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     4.472 |       4.127 |      0.346 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.909 |       0.856 |      0.053 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     6.611 |       6.610 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     1.316 |       1.297 |      0.019 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.089 |       0.075 |      0.013 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.582 |       0.581 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.027 |       0.012 |      0.015 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.063 |       0.063 |      0.001 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -141,17 +139,12 @@ Table of Contents
 +-----------------------+-----------+
 | Name                  | Power (W) |
 +-----------------------+-----------+
-| top_module            |    27.492 |
-|   displayDriver       |     0.289 |
-|     pixelClockDivider |     0.083 |
-|   ftrig               |     0.160 |
-|     kbd               |     0.153 |
-|   img_io              |     2.421 |
-|     buffer0           |     0.082 |
-|       U0              |     0.082 |
-|     buffer1           |     0.106 |
-|       U0              |     0.106 |
-|   ka0                 |     1.028 |
+| top_module            |     3.411 |
+|   b0                  |     0.827 |
+|     bram_ip           |     0.797 |
+|       U0              |     0.797 |
+|   displayDriver       |     0.418 |
+|     pixelClockDivider |     0.093 |
 +-----------------------+-----------+
 
 

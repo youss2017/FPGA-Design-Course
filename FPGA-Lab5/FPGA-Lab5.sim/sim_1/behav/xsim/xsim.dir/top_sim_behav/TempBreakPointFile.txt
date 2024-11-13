@@ -1,0 +1,9 @@
+Breakpoint File Version 1.0
+70,true,"C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/top_module.sv"
+89,true,"C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/top_module.sv"
+92,true,"C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/top_module.sv"
+98,true,"C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/top_module.sv"
+90,true,"C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/image_block.sv"
+101,true,"C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/image_block.sv"
+108,true,"C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/image_block.sv"
+114,true,"C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/image_block.sv"

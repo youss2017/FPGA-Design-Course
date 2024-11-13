@@ -1,0 +1,11 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v,1731466824,verilog,,C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/clock_divider.v,,blk_mem_gen_0,,uvm,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sim_1/new/top_sim.sv,1731466622,systemVerilog,,,,top_sim,,uvm,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/clock_divider.v,1731455604,verilog,,C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/vga_driver.v,,clock_divider,,uvm,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/image_block.sv,1731466858,systemVerilog,C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sim_1/new/top_sim.sv;C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/top_module.sv,C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/top_module.sv,,$unit_image_block_sv_4239895123;image_bram,,uvm,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/top_module.sv,1731467816,systemVerilog,,C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sim_1/new/top_sim.sv,,top_module,,uvm,,,,,,
+C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sources_1/new/vga_driver.v,1731455620,verilog,,,,vga_driver,,uvm,,,,,,

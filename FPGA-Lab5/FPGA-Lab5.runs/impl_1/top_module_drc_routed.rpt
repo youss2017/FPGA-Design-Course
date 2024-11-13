@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Mon Nov  4 16:12:51 2024
+| Date         : Tue Nov 12 22:49:24 2024
 | Host         : DESKTOP-339EFSV running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_module_drc_routed.rpt -pb top_module_drc_routed.pb -rpx top_module_drc_routed.rpx
 | Design       : top_module
@@ -24,14 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 7
+             Violations found: 6
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| DPIP-1   | Warning  | Input pipelining                                    | 2          |
-| DPOP-1   | Warning  | PREG Output pipelining                              | 2          |
-| DPOP-2   | Warning  | MREG Output pipelining                              | 2          |
+| PDRC-153 | Warning  | Gated clock check                                   | 5          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -49,34 +47,29 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
 Refer to the device configuration user guide for more information.
 Related violations: <none>
 
-DPIP-1#1 Warning
-Input pipelining  
-DSP img_io/read_addr input img_io/read_addr/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+PDRC-153#1 Warning
+Gated clock check  
+Net b0/E[0] is a gated clock net sourced by a combinational pin b0/write_y_reg[10]_i_2/O, cell b0/write_y_reg[10]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
-DPIP-1#2 Warning
-Input pipelining  
-DSP img_io/read_addr input img_io/read_addr/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+PDRC-153#2 Warning
+Gated clock check  
+Net b0/FSM_onehot_current_state_reg[0][0] is a gated clock net sourced by a combinational pin b0/FSM_onehot_next_state_reg[2]_i_1/O, cell b0/FSM_onehot_next_state_reg[2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
-DPOP-1#1 Warning
-PREG Output pipelining  
-DSP img_io/read_addr output img_io/read_addr/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+PDRC-153#3 Warning
+Gated clock check  
+Net b0/FSM_onehot_current_state_reg[0]_0[0] is a gated clock net sourced by a combinational pin b0/write_x_reg[7]_i_2/O, cell b0/write_x_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
-DPOP-1#2 Warning
-PREG Output pipelining  
-DSP img_io/write_addr output img_io/write_addr/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+PDRC-153#4 Warning
+Gated clock check  
+Net b0/next_state_reg[1]_i_2_n_0 is a gated clock net sourced by a combinational pin b0/next_state_reg[1]_i_2/O, cell b0/next_state_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
-DPOP-2#1 Warning
-MREG Output pipelining  
-DSP img_io/read_addr multiplier stage img_io/read_addr/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#2 Warning
-MREG Output pipelining  
-DSP img_io/write_addr multiplier stage img_io/write_addr/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+PDRC-153#5 Warning
+Gated clock check  
+Net i_write_mode__0 is a gated clock net sourced by a combinational pin i_write_mode_reg_i_1/O, cell i_write_mode_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 
