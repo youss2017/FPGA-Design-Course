@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Tue Nov 12 22:04:39 2024
+// Date        : Tue Nov 12 21:43:10 2024
 // Host        : DESKTOP-339EFSV running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top blk_mem_gen_0 -prefix
+//               blk_mem_gen_0_ blk_mem_gen_0_stub.v
 // Design      : blk_mem_gen_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1
@@ -15,9 +15,9 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "blk_mem_gen_v8_4_8,Vivado 2024.1" *)
-module blk_mem_gen_0(clka, wea, addra, dina, douta, clkb, enb, web, addrb, dinb, 
+module blk_mem_gen_0(clka, wea, addra, dina, douta, clkb, web, addrb, dinb, 
   doutb)
-/* synthesis syn_black_box black_box_pad_pin="wea[0:0],addra[15:0],dina[3:0],douta[3:0],enb,web[0:0],addrb[15:0],dinb[3:0],doutb[3:0]" */
+/* synthesis syn_black_box black_box_pad_pin="wea[0:0],addra[15:0],dina[3:0],douta[3:0],web[0:0],addrb[15:0],dinb[3:0],doutb[3:0]" */
 /* synthesis syn_force_seq_prim="clka" */
 /* synthesis syn_force_seq_prim="clkb" */;
   input clka /* synthesis syn_isclock = 1 */;
@@ -26,7 +26,6 @@ module blk_mem_gen_0(clka, wea, addra, dina, douta, clkb, enb, web, addrb, dinb,
   input [3:0]dina;
   output [3:0]douta;
   input clkb /* synthesis syn_isclock = 1 */;
-  input enb;
   input [0:0]web;
   input [15:0]addrb;
   input [3:0]dinb;

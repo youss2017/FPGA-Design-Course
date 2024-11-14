@@ -1,0 +1,53 @@
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module top_tb.dut.b0.bram_ip.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_5 collision detected at time: 5000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 7000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 9000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 11000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 13000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 15000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 17000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 19000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 21000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 23000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 25000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 27000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 29000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 31000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 33000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 35000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 37000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 39000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 41000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 43000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354637000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354639000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354641000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354643000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354645000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354647000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354649000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354651000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354653000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354655000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354657000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354659000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354661000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354663000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354665000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354667000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354669000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354671000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354673000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354675000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354677000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354679000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354681000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_5 collision detected at time: 3354683000, Instance: top_tb.dut.b0.intermediate_bram.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst , A read address: 0, B write address: 0
+Stopped at time : 3354697 ns : File "C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5_attempt3/FPGA-Lab5_attempt3.srcs/sources_1/new/image_block.sv" Line 136
+INFO: xsimkernel Simulation Memory Usage: 17636 KB (Peak: 17636 KB), Simulation CPU Usage: 14703 ms

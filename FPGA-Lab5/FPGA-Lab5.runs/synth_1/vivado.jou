@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Nov 12 22:47:43 2024
-# Process ID: 47144
+# Start of session at: Thu Nov 14 00:30:16 2024
+# Process ID: 39688
 # Current directory: C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.runs/synth_1
 # Command line: vivado.exe -log top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
 # Log file: C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.runs/synth_1/top_module.vds
@@ -17,8 +17,7 @@
 # CPU Physical cores:8
 # CPU Logical cores :16
 # Host memory       :51481 MB
-# Swap memory       :10497 MB
-# Total Virtual     :61978 MB
-# Available Virtual :9469 MB
+# Swap memory       :8321 MB
+# Total Virtual     :59802 MB
+# Available Virtual :11250 MB
 #-----------------------------------------------------------
-source top_module.tcl -notrace

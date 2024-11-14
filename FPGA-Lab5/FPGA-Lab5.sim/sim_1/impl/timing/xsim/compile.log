@@ -1,0 +1,35 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.sim/sim_1/impl/timing/xsim/top_sim_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_HD2
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-311] analyzing module clock_divider__parameterized0
+INFO: [VRFC 10-311] analyzing module image_bram
+INFO: [VRFC 10-311] analyzing module top_module
+INFO: [VRFC 10-311] analyzing module vga_driver
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_generic_cstr_HD6
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width_HD7
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized0_HD9
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized1_HD11
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_width__parameterized2_HD13
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init_HD8
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init__parameterized0_HD10
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init__parameterized1
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init__parameterized1_HD12
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init__parameterized2
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init__parameterized2_HD14
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_top_HD5
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_4_8
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_4_8_HD3
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_4_8_synth
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_blk_mem_gen_v8_4_8_synth_HD4
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/youssef/Desktop/DigitalSystems/FPGA-Lab5/FPGA-Lab5.srcs/sim_1/new/top_sim.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_sim

@@ -40,11 +40,13 @@ module top_sim();
         
         clk = 0;
         
-        do_clock(1);
+        do_clock(3);
         T17 = 1;
         do_clock(1);
         T17 = 0;
-        do_clock(100);
+        // do_clock(100);
+        
+        forever #5 clk = ~clk;
         
         $stop;
     end

@@ -1,0 +1,12 @@
+Time resolution is 1 ps
+Time: 0 | Starting execute_bench Testbench
+Time: 10000 | Reset signal applied, i_reset = 1
+[PASS] ADD, Time: 60000 | RS1: 30 | RS2: 188 | IMM: 0 | RD_Out = 218, PC_ext = x, PC_load: x $0d       218
+[PASS] SUB, Time: 100000 | RS1: 30 | RS2: 188 | IMM: 0 | RD_Out = 4294967138, PC_ext = x, PC_load: x $0d4294967138
+[PASS] SLTU, Time: 140000 | RS1: 30 | RS2: 188 | IMM: 0 | RD_Out = 1, PC_ext = x, PC_load: x $0d         1
+[PASS] XOR, Time: 180000 | RS1: 30 | RS2: 188 | IMM: 0 | RD_Out = 162, PC_ext = x, PC_load: x $0d       162
+[PASS] AND, Time: 220000 | RS1: 30 | RS2: 188 | IMM: 0 | RD_Out = 28, PC_ext = x, PC_load: x $0d        28
+[PASS] SLL, Time: 260000 | RS1: 30 | RS2: 188 | IMM: 0 | RD_Out = 0, PC_ext = x, PC_load: x $0d         0
+[PASS] SLT, Time: 300000 | RS1: 30 | RS2: 188 | IMM: 0 | RD_Out = 1, PC_ext = x, PC_load: x $0d         1
+Time: 300000 | Testbench completed.
+$stop called at time : 300 ns : File "C:/Users/youssef/Desktop/DigitalSystems/RV32I_CPU/RV32I_CPU.srcs/sim_1/new/execute_bench.sv" Line 150
