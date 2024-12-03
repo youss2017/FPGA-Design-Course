@@ -1,25 +1,5 @@
 `timescale 1ns / 1ps
 
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 11/12/2024 06:52:49 PM
-// Design Name: 
-// Module Name: image_bram
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 typedef enum { RESET, READ, WRITE, COPY_X0, COPY_X1, COPY_Y, WAITING } bram_s;
 
 module image_bram

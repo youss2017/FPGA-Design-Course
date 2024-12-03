@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../Bomberman.gen/sources_1/ip/block_destruction_sprite/sim/block_destruction_sprite.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../Bomberman.gen/sources_1/ip/pillar_rom_gen/sim/pillar_rom_gen.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,2 @@
+block_sprite.v,verilog,xil_defaultlib,../../../../Bomberman.gen/sources_1/ip/block_sprite/sim/block_sprite.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

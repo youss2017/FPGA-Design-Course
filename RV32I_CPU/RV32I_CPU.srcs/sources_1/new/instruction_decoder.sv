@@ -55,9 +55,6 @@ localparam reg_family = 'b0110011; // ADD, SUB, SLL, SLT, SLTU, XOR, SRL, SRA, O
 import rapid_pkg::*;
 
 module instruction_decoder
-#(
-    parameter XLEN = 32
-)
 (
     input  logic                        i_clk,
     input  logic                        i_reset,
@@ -73,8 +70,9 @@ module instruction_decoder
 );
 
     DE_state_t current_state, next_state;
-    control_s control_signal;
+   
     logic [XLEN-1:0] pc, instruction;
+    logic done;
 
     // This is only used to track state for verification
     assign o_current_state = current_state;
@@ -82,11 +80,11 @@ module instruction_decoder
 
     always_ff @(posedge i_clk, posedge i_reset) begin
 
-        if (i_reset) begin
-            control_signal <= control_s_default();
-            current_state <= DE_DECODE; // TODO/FIXME: need to check the logic of reset later
-        end else begin
+        if (i_reset)
+            current_state <= DE_RESET;
+        else begin
             current_state <= next_state;
+            o_done <= done;
         end
 
     end
@@ -96,7 +94,7 @@ module instruction_decoder
             DE_WAIT: begin 
                 if(i_pipeline_ready) begin
                     next_state = DE_DECODE;
-                    o_done = 0;
+                    done = 0;
                     // Receive instruction
                     pc = i_pc;
                     instruction = i_instruction;
@@ -105,9 +103,10 @@ module instruction_decoder
                     //                       we can only be sure the previous stage output is valid (aka has not 
                     //                       moved to next instruction) for only 1 clock cycle after "i_pipeline_ready" goes high.
                 end
+                else
+                    done = 1;
             end
             DE_DECODE: begin 
-                o_done = 0;
                 // Parse instruction
                 decode_instruction(instruction, o_imm, o_control_signal); // Nicolas (11/10/2024): Need to be in FF block?
                 // Youssef (11/10/2024): no cause, this will be a continous assignment but the values will not be updated
@@ -118,9 +117,15 @@ module instruction_decoder
                 // Youssef (11/20/2024): This is not true, all are loaded at once, this combinational logic.
                 // Nicolas: Hmm I think ur right then, thought it was always sequential
                 // Youssef (11/20/2024): Should we keep this here? Nicolas: yeah its kinda funny =)
-                next_state = DE_WAIT;
+                next_state = DE_LOAD_REGISTERS;
                 o_pc = pc;
-                o_done = 1;
+            end
+            DE_LOAD_REGISTERS: next_state = DE_WAIT;
+            // This handles the RESET signal or any unknown state
+            default: begin
+                instruction = NOP_INSTRUCTION;
+                pc = RESET_VECTOR; // This does not matter because the nop insturction does not depend on pc value
+                next_state = DE_DECODE;
             end
         endcase
     end

@@ -50,24 +50,7 @@
 // Determine what can be nonblocking without timing issues
 import rapid_pkg::*;
 
-localparam 
-    ADD_or_SUB = 3'b000,
-    SLT = 3'b010,
-    SLTU = 3'b011,
-    XOR_ = 3'b100,
-    OR_ = 3'b110,
-    AND_ = 3'b111,
-    SLL = 3'b001,
-    SRL_or_SRA = 3'b101,
-    LB_or_SB = 3'b000,
-    LH_or_SH = 3'b001,
-    LW_or_SW = 3'b010,
-    LBU = 3'b100,
-    LHU = 3'b101;
-
-
 module execute_stage
-#(parameter XLEN = 32)
 (
     input logic                         i_clk,
     input logic                         i_reset,
@@ -80,6 +63,7 @@ module execute_stage
     output control_s                    o_control_signal,
     output logic        [XLEN-1:0]      o_pc_ext,
     output logic                        o_pc_load,
+    output logic        [XLEN-1:0]      o_rs2,
     // o_rd_output is used for passing the memory address stage to MEM stage
     // OR it is used the rd data for writing to register
     output logic        [XLEN-1:0]      o_rd_output,
@@ -99,20 +83,15 @@ module execute_stage
     control_s control_signal;
     // outputs
     logic [XLEN-1:0] rd_output;
+    logic done;
 
     always_ff @(posedge i_clk, posedge i_reset) begin
 
         if (i_reset) begin
-            o_done <= 1;
-            rs1 <= 0;
-            rs2 <= 0;
-            imm <= 0;
-            pc <= 0;
-            // TODO/FIXME: Configure the control_signal to do a "nop"
-            current_state <= EX_EXECUTE;
-            // TODO/FIXME: Check RESET logic :/
+            current_state <= EX_RESET;
         end else begin
             current_state <= next_state;
+            o_done <= done;
         end        
 
     end
@@ -122,29 +101,37 @@ module execute_stage
         case(current_state)
             EX_WAIT: begin
                 if (i_pipeline_ready) begin
-                    o_done = 0;
-                    next_state = EX_EXECUTE;
-                    // recv next instruction
-                    control_signal = i_control_signal;
+                    done = 0;
                     pc = i_pc;
                     rs1 = i_rs1;
                     rs2 = i_rs2;
                     imm = i_imm;
+                    next_state = EX_EXECUTE;
+                    // recv next instruction
+                    control_signal = i_control_signal;
+
                 end
+                else done = 1;
             end
             EX_EXECUTE: begin
                 alu_execute(
                     control_signal,
                     rs1,
                     control_signal.alu_imm ? imm : rs2,
+                    imm,
                     pc,
                     o_rd_output,
                     o_pc_ext,
                     o_pc_load
                 );
                 next_state = EX_WAIT;
-                o_done = 1;
                 o_control_signal = control_signal;
+                o_rs2 = rs2;
+            end
+            
+            default: begin
+                control_signal = control_s_default();
+                next_state = EX_EXECUTE;
             end
         endcase
 
@@ -155,6 +142,7 @@ module execute_stage
             input control_s control_signal,
             input logic [XLEN-1:0] port1,
             input logic [XLEN-1:0] port2,
+            input logic [XLEN-1:0] imm,
             input logic [XLEN-1:0] pc,
         /* outputs */
             output logic [XLEN-1:0] rd_output,
@@ -199,11 +187,13 @@ module execute_stage
                 AND_: rd_output = $signed(port1) & $signed(port2);              // ANDI
                 SLL: rd_output = $unsigned(port1) << $unsigned(port2);           // SLLI
                 SRL_or_SRA: begin 
-                    if (control_signal.iop) rd_output = $unsigned(port1) >> $unsigned(port2[4:0]); // SRLI
-                    else rd_output = $unsigned(port1) >>> $unsigned(port2[4:0]);                   // SRAI
+                    if (!control_signal.iop) rd_output = $unsigned(port1) >> $unsigned(port2); // SRLI
+                    else rd_output = $unsigned(port1) >>> $unsigned(port2);                   // SRAI
                 end
             endcase
 
+            pc_ext = 0;
+            pc_load = 0;
         end
         
         // BEQ/BNE/BLT/BGE/BLTU/BEGU
@@ -226,28 +216,19 @@ module execute_stage
                 /* BGEU */ 3'b111: pc_load = $unsigned(port1) >= $unsigned(port2);
             endcase
             
-            pc_ext = $signed(pc) + (pc_load ? $signed(port2) : 4);
-            
+            pc_ext = pc_load ? ($signed(pc) + $signed(imm)) : RESET_VECTOR;
         end
 
     // JAL/JALR
     else if (control_signal.uncond_branch) begin
         // Instruction	OpCode	Control Category	Finite Control Signals	Inverse Op	Control Signal
-        // JAL	         11011	 001 (UNCOND.BRANCH)	     000	            0	      010-000-0
-        // JALR	         11001	 001 (UNCOND.BRANCH)	     000	            0	      011-000-0
-    
-        case (control_signal.fcs_opcode)
-            /* JAL */ 3'b010: begin 
-                rd_output = pc + 4; // This is rd
-                pc_ext = $signed(pc) + $signed(port2); // This is pc
-                pc_load = 1;
-            end
-            /* JALR */ 3'b011: begin 
-                rd_output = pc + 4; // This is rd
-                pc_ext = ( $signed(pc) + $signed(port2) ) & ~32'b1 ;  // This is pc
-                pc_load = 1;
-            end
-        endcase
+        // JAL	         11011	 001 (UNCOND.BRANCH)	     000	            0	      000-000-0
+        // JALR	         11001	 001 (UNCOND.BRANCH)	     000	            1	      000-000-1
+   
+        /* JAL */ 
+       rd_output = pc + 4; // This is rd
+       pc_ext = $signed(control_signal.iop ? port1 /* JALR */ : pc /* JAL */) + $signed(imm); // This is pc
+       pc_load = 1;
 
     end
 
@@ -258,12 +239,13 @@ module execute_stage
         // AUIPC	     00101	 000 (LOAD UPP IMM)	         000	            0	      000-000-1
         if (control_signal.iop) begin
             // LUI
-            rd_output[31:12] = port2;
+            rd_output[31:12] = imm;
             rd_output[11:0] = 0;
         end else 
             // AUPIC
-            rd_output = i_pc + port2;
-
+            rd_output = $signed(pc) + ($signed(imm) << 12);
+        pc_ext = 0;
+        pc_load = 0;
     end
 
     // Memory Operations
@@ -277,8 +259,13 @@ module execute_stage
             // SB	         01000	 011 (MEM LOAD/STORE)	     000	            1	      011-000-1
             // SH	         01000	 011 (MEM LOAD/STORE)	     001	            1	      011-001-1
             // SW	         01000	 011 (MEM LOAD/STORE)	     010	            1	      011-010-1
-            rd_output = port1 + port2;
-        end
+            rd_output = port1 + imm;
+            pc_ext = 0;
+            pc_load = 0;
+    end else begin
+        pc_ext = 0;
+        pc_load = 0;
+    end
 
     endtask
     

@@ -1,7 +1,7 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Thu Nov 14 10:02:40 2024
+| Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date             : Fri Nov 15 14:57:19 2024
 | Host             : DESKTOP-339EFSV running 64-bit major release  (build 9200)
 | Command          : report_power -file top_module_power_routed.rpt -pb top_module_power_summary_routed.pb -rpx top_module_power_routed.rpx
 | Design           : top_module
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 7.501        |
+| Total On-Chip Power (W)  | 9.045        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 7.390        |
-| Device Static (W)        | 0.111        |
+| Dynamic (W)              | 8.916        |
+| Device Static (W)        | 0.129        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 47.5         |
-| Junction Temperature (C) | 62.5         |
+| Max Ambient (C)          | 39.8         |
+| Junction Temperature (C) | 70.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,18 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     1.205 |      501 |       --- |             --- |
-|   LUT as Logic          |     1.094 |      215 |     20800 |            1.03 |
-|   Register              |     0.055 |      180 |     41600 |            0.43 |
-|   CARRY4                |     0.042 |       19 |      8150 |            0.23 |
+| Slice Logic             |     1.376 |      518 |       --- |             --- |
+|   LUT as Logic          |     1.278 |      232 |     20800 |            1.12 |
+|   Register              |     0.051 |      182 |     41600 |            0.44 |
+|   CARRY4                |     0.034 |       19 |      8150 |            0.23 |
 |   BUFG                  |     0.012 |        2 |        32 |            6.25 |
 |   LUT as Shift Register |     0.002 |        1 |      9600 |            0.01 |
-|   Others                |     0.000 |       34 |       --- |             --- |
-| Signals                 |     2.100 |      385 |       --- |             --- |
-| Block RAM               |     2.462 |       16 |        50 |           32.00 |
-| I/O                     |     1.623 |       25 |       106 |           23.58 |
-| Static Power            |     0.111 |          |           |                 |
-| Total                   |     7.501 |          |           |                 |
+|   Others                |     0.000 |       35 |       --- |             --- |
+| Signals                 |     2.216 |      391 |       --- |             --- |
+| Block RAM               |     2.368 |       16 |        50 |           32.00 |
+| I/O                     |     2.956 |       25 |       106 |           23.58 |
+| Static Power            |     0.129 |          |           |                 |
+| Total                   |     9.045 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,16 +73,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     5.602 |       5.560 |      0.041 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.075 |       0.059 |      0.016 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.457 |       0.456 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     5.816 |       5.761 |      0.056 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.125 |       0.108 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.834 |       0.833 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.221 |       0.219 |      0.002 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.214 |       0.212 |      0.002 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -140,15 +140,15 @@ Table of Contents
 +-----------------------+-----------+
 | Name                  | Power (W) |
 +-----------------------+-----------+
-| top_module            |     7.390 |
-|   b0                  |     3.723 |
-|     bram_ip           |     1.280 |
-|       U0              |     1.280 |
-|     intermediate_bram |     1.390 |
-|       U0              |     1.390 |
-|   displayDriver       |     0.854 |
-|     pixelClockDivider |     0.067 |
-|   kbd                 |     0.136 |
+| top_module            |     8.916 |
+|   b0                  |     3.967 |
+|     bram_ip           |     1.240 |
+|       U0              |     1.240 |
+|     intermediate_bram |     1.496 |
+|       U0              |     1.496 |
+|   displayDriver       |     0.882 |
+|     pixelClockDivider |     0.060 |
+|   kbd                 |     0.143 |
 +-----------------------+-----------+
 
 

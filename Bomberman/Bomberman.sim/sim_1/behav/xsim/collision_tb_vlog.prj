@@ -1,0 +1,21 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Bomberman.gen/sources_1/ip/bomberman_sprite_gen/sim/bomberman_sprite_gen.v" \
+"../../../../Bomberman.gen/sources_1/ip/bomb_rom/sim/bomb_rom.v" \
+"../../../../Bomberman.gen/sources_1/ip/block_sprite/sim/block_sprite.v" \
+"../../../../Bomberman.gen/sources_1/ip/pillar_rom_gen/sim/pillar_rom_gen.v" \
+"../../../../Bomberman.gen/sources_1/ip/map_mem/sim/map_mem.v" \
+
+sv xil_defaultlib  \
+"../../../../Bomberman.srcs/sources_1/new/bomb_pkg.sv" \
+"../../../../Bomberman.srcs/sources_1/new/block_renderer.sv" \
+"../../../../Bomberman.srcs/sources_1/new/bomberman.sv" \
+"../../../../Bomberman.srcs/sources_1/new/bomberman_map.sv" \
+"../../../../Bomberman.srcs/sources_1/new/collision_detection.sv" \
+"../../../../Bomberman.srcs/sim_1/new/collision_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

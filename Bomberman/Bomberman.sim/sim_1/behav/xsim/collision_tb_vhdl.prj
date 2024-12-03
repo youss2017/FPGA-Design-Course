@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Bomberman.gen/sources_1/ip/bomberman_sprite_gen/synth/bomberman_sprite_gen.vhd" \
+
+# Do not sort compile order
+nosort

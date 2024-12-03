@@ -1,0 +1,25 @@
+
+*** Running vivado
+    with args -log map_mem.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source map_mem.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Dec  2 21:34:46 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source map_mem.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 508.078 ; gain = 199.152
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: map_mem
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 8dc722e352858d70 to dir: C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/map_mem_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.cache/ip/2024.1/8/d/8dc722e352858d70/map_mem.dcp to C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/map_mem_synth_1/map_mem.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.cache/ip/2024.1/8/d/8dc722e352858d70/map_mem_sim_netlist.v to C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/map_mem_synth_1/map_mem_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.cache/ip/2024.1/8/d/8dc722e352858d70/map_mem_sim_netlist.vhdl to C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/map_mem_synth_1/map_mem_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.cache/ip/2024.1/8/d/8dc722e352858d70/map_mem_stub.v to C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/map_mem_synth_1/map_mem_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.cache/ip/2024.1/8/d/8dc722e352858d70/map_mem_stub.vhdl to C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/map_mem_synth_1/map_mem_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP map_mem, cache-ID = 8dc722e352858d70.
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  2 21:34:58 2024...

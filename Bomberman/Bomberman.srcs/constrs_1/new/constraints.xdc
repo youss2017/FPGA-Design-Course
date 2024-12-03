@@ -1,0 +1,71 @@
+set_property IOSTANDARD LVCMOS33 [get_ports {o_blue[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_blue[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_blue[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_blue[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_green[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_green[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_green[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_green[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports o_hsync]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_red[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_red[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_red[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {o_red[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports o_vsync]
+set_property PACKAGE_PIN W5 [get_ports i_clk]
+set_property IOSTANDARD LVCMOS33 [get_ports i_clk]
+
+set_property PACKAGE_PIN N19 [get_ports {o_red[3]}]
+set_property PACKAGE_PIN J19 [get_ports {o_red[2]}]
+set_property PACKAGE_PIN H19 [get_ports {o_red[1]}]
+set_property PACKAGE_PIN G19 [get_ports {o_red[0]}]
+set_property PACKAGE_PIN D17 [get_ports {o_green[3]}]
+set_property PACKAGE_PIN G17 [get_ports {o_green[2]}]
+set_property PACKAGE_PIN H17 [get_ports {o_green[1]}]
+set_property PACKAGE_PIN J17 [get_ports {o_green[0]}]
+set_property PACKAGE_PIN J18 [get_ports {o_blue[3]}]
+set_property PACKAGE_PIN K18 [get_ports {o_blue[2]}]
+set_property PACKAGE_PIN L18 [get_ports {o_blue[1]}]
+set_property PACKAGE_PIN N18 [get_ports {o_blue[0]}]
+set_property PACKAGE_PIN P19 [get_ports o_hsync]
+set_property PACKAGE_PIN R19 [get_ports o_vsync]
+
+set_property IOSTANDARD LVCMOS33 [get_ports i_top_T18]
+set_property PACKAGE_PIN U17 [get_ports i_down_U17]
+set_property PACKAGE_PIN W19 [get_ports i_left_W19]
+set_property PACKAGE_PIN T17 [get_ports i_right_T17]
+set_property PACKAGE_PIN T18 [get_ports i_top_T18]
+set_property IOSTANDARD LVCMOS33 [get_ports i_right_T17]
+set_property IOSTANDARD LVCMOS33 [get_ports i_left_W19]
+set_property IOSTANDARD LVCMOS33 [get_ports i_down_U17]
+
+set_property PACKAGE_PIN V19 [get_ports o_led[3]]
+set_property IOSTANDARD LVCMOS33 [get_ports o_led[3]]
+
+set_property PACKAGE_PIN U19 [get_ports o_led[2]]
+set_property IOSTANDARD LVCMOS33 [get_ports o_led[2]]
+
+set_property PACKAGE_PIN E19 [get_ports o_led[1]]
+set_property IOSTANDARD LVCMOS33 [get_ports o_led[1]]
+
+set_property PACKAGE_PIN U16 [get_ports o_led[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports o_led[0]]
+
+
+set_property PACKAGE_PIN W17 [get_ports i_W17]
+set_property IOSTANDARD LVCMOS33 [get_ports i_W17]
+
+
+set_property PACKAGE_PIN W16 [get_ports i_W16]
+set_property IOSTANDARD LVCMOS33 [get_ports i_W16]
+
+
+set_property PACKAGE_PIN V16 [get_ports i_V16]
+set_property IOSTANDARD LVCMOS33 [get_ports i_V16]
+
+
+set_property PACKAGE_PIN V17 [get_ports i_V17]
+set_property IOSTANDARD LVCMOS33 [get_ports i_V17]
+
+set_property PACKAGE_PIN U18 [get_ports i_bomb_U18]
+set_property IOSTANDARD LVCMOS33 [get_ports i_bomb_U18]

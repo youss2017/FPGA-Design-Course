@@ -1,12 +1,12 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Thu Nov 14 10:02:17 2024
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Nov 15 14:56:58 2024
 | Host         : DESKTOP-339EFSV running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_module_control_sets_placed.rpt
 | Design       : top_module
 | Device       : xc7a35t
----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 Control Set Information
 
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    17 |
-|    Minimum number of control sets                        |    17 |
+| Total control sets                                       |    16 |
+|    Minimum number of control sets                        |    16 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    60 |
+| Unused register locations in slices containing registers |    66 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    17 |
+| Total control sets |    16 |
 | >= 0 to < 4        |     0 |
-| >= 4 to < 6        |     2 |
-| >= 6 to < 8        |     3 |
-| >= 8 to < 10       |     2 |
-| >= 10 to < 12      |     7 |
-| >= 12 to < 14      |     0 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     8 |
+| >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     3 |
+| >= 16              |     2 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              45 |           20 |
+| No           | No                    | No                     |              42 |           20 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              20 |            9 |
-| Yes          | No                    | No                     |              27 |           14 |
+| No           | Yes                   | No                     |              20 |            8 |
+| Yes          | No                    | No                     |              76 |           35 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              88 |           26 |
+| Yes          | Yes                   | No                     |              44 |           13 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,22 +73,21 @@ Table of Contents
 +--------------------------------------+----------------------------------+----------------------------------+------------------+----------------+--------------+
 |             Clock Signal             |           Enable Signal          |         Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------------------------------+----------------------------------+----------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG                       | read_offset_y[3]_i_1_n_0         |                                  |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                       | b0/E[0]                          |                                  |                3 |              4 |         1.33 |
-|  clk_IBUF_BUFG                       | p_2_out                          | pixelSum[5]_i_1_n_0              |                2 |              6 |         3.00 |
-| ~clk_IBUF_BUFG                       |                                  |                                  |                4 |              6 |         1.50 |
-|  clk_IBUF_BUFG                       | read_offset_y[3]_i_1_n_0         | read_offset_y[10]_i_1_n_0        |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG                       | b0/E[0]                          |                                  |                2 |              4 |         2.00 |
+| ~clk_IBUF_BUFG                       |                                  |                                  |                3 |              6 |         2.00 |
 |  clk_IBUF_BUFG                       | scancode_led[7]_i_1_n_0          |                                  |                6 |              8 |         1.33 |
-| ~clk_IBUF_BUFG                       |                                  | displayDriver/xCoord_reg[7]_0    |                5 |              9 |         1.80 |
-|  clk_IBUF_BUFG                       | b0/CEA2                          | b0/copy_y[10]_i_1_n_0            |                3 |             10 |         3.33 |
-|  clk_IBUF_BUFG                       | b0/CEC                           | b0/copy_x[10]_i_1_n_0            |                3 |             10 |         3.33 |
-|  clk_IBUF_BUFG                       | current_pixel_y[10]_i_1_n_0      | b0/current_state_reg[3]          |                4 |             11 |         2.75 |
-|  clk_IBUF_BUFG                       | current_pixel_x[10]_i_2_n_0      | b0/current_state_reg[3]          |                3 |             11 |         3.67 |
-|  clk_IBUF_BUFG                       | read_offset_x[10]_i_2_n_0        | read_offset_x[10]_i_1_n_0        |                3 |             11 |         3.67 |
+|  clk_IBUF_BUFG                       | p_2_out                          |                                  |                4 |              9 |         2.25 |
+| ~clk_IBUF_BUFG                       |                                  | displayDriver/yCoord_reg[10]_0   |                4 |              9 |         2.25 |
+|  clk_IBUF_BUFG                       | current_pixel_x[10]_i_2_n_0      | current_pixel_x0                 |                4 |             11 |         2.75 |
+|  clk_IBUF_BUFG                       | read_offset_x[10]_i_1_n_0        |                                  |                4 |             11 |         2.75 |
+|  clk_IBUF_BUFG                       | current_pixel_y[10]_i_1_n_0      | current_pixel_x0                 |                3 |             11 |         3.67 |
+|  clk_IBUF_BUFG                       | read_offset_y[10]_i_1_n_0        |                                  |                5 |             11 |         2.20 |
+|  clk_IBUF_BUFG                       | b0/CEA2                          |                                  |                6 |             11 |         1.83 |
+|  clk_IBUF_BUFG                       | b0/CEC                           |                                  |                5 |             11 |         2.20 |
 |  displayDriver/pixelClockDivider/CLK |                                  | displayDriver/xCoord[10]_i_1_n_0 |                4 |             11 |         2.75 |
-|  displayDriver/pixelClockDivider/CLK | displayDriver/xCoord[10]_i_1_n_0 |                                  |                4 |             11 |         2.75 |
-|  clk_IBUF_BUFG                       |                                  |                                  |                7 |             16 |         2.29 |
-|  clk_IBUF_BUFG                       | b0/write_y[10]_i_2_n_0           | b0/write_y[10]_i_1_n_0           |                5 |             22 |         4.40 |
+|  displayDriver/pixelClockDivider/CLK | displayDriver/xCoord[10]_i_1_n_0 |                                  |                3 |             11 |         3.67 |
+|  clk_IBUF_BUFG                       |                                  |                                  |                8 |             13 |         1.62 |
+|  clk_IBUF_BUFG                       | b0/write_y[10]_i_2_n_0           | b0/write_y[10]_i_1_n_0           |                6 |             22 |         3.67 |
 | ~kclk_IBUF_BUFG                      |                                  |                                  |                9 |             24 |         2.67 |
 +--------------------------------------+----------------------------------+----------------------------------+------------------+----------------+--------------+
 

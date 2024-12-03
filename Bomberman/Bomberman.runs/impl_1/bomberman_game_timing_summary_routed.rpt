@@ -1,0 +1,851 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Dec  3 11:35:32 2024
+| Host         : DESKTOP-339EFSV running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file bomberman_game_timing_summary_routed.rpt -pb bomberman_game_timing_summary_routed.pb -rpx bomberman_game_timing_summary_routed.rpx -warn_on_violation
+| Design       : bomberman_game
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                     Violations  
+---------  ----------------  ------------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell     985         
+LUTAR-1    Warning           LUT drives async reset alert    2           
+TIMING-20  Warning           Non-clocked latch               18          
+LATCH-1    Advisory          Existing latches in the design  1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (1399)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (1156)
+5. checking no_input_delay (5)
+6. checking no_output_delay (18)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (1399)
+---------------------------
+ There are 18 register/latch pins with no clock driven by root clock pin: i_bomb_U18 (HIGH)
+
+ There are 940 register/latch pins with no clock driven by root clock pin: i_clk (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: i_down_U17 (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: i_left_W19 (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: i_right_T17 (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: i_top_T18 (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: display_signal/pixelClockDivider/out_clk_reg/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[x][10]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[x][2]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[x][3]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[x][4]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[x][5]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[x][6]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[x][7]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[x][8]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[x][9]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[y][10]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[y][2]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[y][3]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[y][4]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[y][5]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[y][6]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[y][7]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[y][8]/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: player1/o_player_pos_reg[y][9]/Q (HIGH)
+
+ There are 23 register/latch pins with no clock driven by root clock pin: updateClock/out_clk_reg/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (1156)
+---------------------------------------------------
+ There are 1156 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (5)
+------------------------------
+ There are 5 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (18)
+--------------------------------
+ There are 18 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                 1174          inf        0.000                      0                 1174           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay          1174 Endpoints
+Min Delay          1174 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[y][4]/G
+                            (positive level-sensitive latch)
+  Destination:            o_led[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        25.443ns  (logic 6.243ns (24.537%)  route 19.200ns (75.463%))
+  Logic Levels:           12  (CARRY4=1 LDCE=1 LUT2=1 LUT5=1 LUT6=3 MUXF7=2 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y37          LDCE                         0.000     0.000 r  player1/o_next_position_reg[y][4]/G
+    SLICE_X6Y37          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  player1/o_next_position_reg[y][4]/Q
+                         net (fo=43, routed)          2.074     2.699    player1/player1_next_position[y][4]
+    SLICE_X4Y42          LUT5 (Prop_lut5_I0_O)        0.124     2.823 r  player1/o_led_OBUF[2]_inst_i_60/O
+                         net (fo=1, routed)           0.000     2.823    player1/o_led_OBUF[2]_inst_i_60_n_0
+    SLICE_X4Y42          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247     3.070 r  player1/o_led_OBUF[2]_inst_i_20/O[0]
+                         net (fo=223, routed)        11.281    14.350    map/o_led_OBUF[2]_inst_i_36_0[0]
+    SLICE_X11Y52         LUT6 (Prop_lut6_I4_O)        0.299    14.649 f  map/o_led_OBUF[2]_inst_i_260/O
+                         net (fo=1, routed)           0.000    14.649    map/o_led_OBUF[2]_inst_i_260_n_0
+    SLICE_X11Y52         MUXF7 (Prop_muxf7_I1_O)      0.245    14.894 f  map/o_led_OBUF[2]_inst_i_137/O
+                         net (fo=1, routed)           0.000    14.894    map/o_led_OBUF[2]_inst_i_137_n_0
+    SLICE_X11Y52         MUXF8 (Prop_muxf8_I0_O)      0.104    14.998 f  map/o_led_OBUF[2]_inst_i_66/O
+                         net (fo=1, routed)           1.186    16.184    map/o_led_OBUF[2]_inst_i_66_n_0
+    SLICE_X11Y47         LUT6 (Prop_lut6_I5_O)        0.316    16.500 f  map/o_led_OBUF[2]_inst_i_29/O
+                         net (fo=1, routed)           0.000    16.500    map/o_led_OBUF[2]_inst_i_29_n_0
+    SLICE_X11Y47         MUXF7 (Prop_muxf7_I0_O)      0.238    16.738 f  map/o_led_OBUF[2]_inst_i_9/O
+                         net (fo=1, routed)           0.000    16.738    map/o_led_OBUF[2]_inst_i_9_n_0
+    SLICE_X11Y47         MUXF8 (Prop_muxf8_I0_O)      0.104    16.842 f  map/o_led_OBUF[2]_inst_i_3/O
+                         net (fo=1, routed)           0.886    17.728    map/o_led_OBUF[2]_inst_i_3_n_0
+    SLICE_X5Y47          LUT6 (Prop_lut6_I0_O)        0.316    18.044 r  map/o_led_OBUF[2]_inst_i_2/O
+                         net (fo=2, routed)           2.107    20.151    map/TR
+    SLICE_X0Y19          LUT2 (Prop_lut2_I1_O)        0.124    20.275 r  map/o_led_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           1.668    21.942    o_led_OBUF[2]
+    U19                  OBUF (Prop_obuf_I_O)         3.501    25.443 r  o_led_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    25.443    o_led[2]
+    U19                                                               r  o_led[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[y][4]/G
+                            (positive level-sensitive latch)
+  Destination:            o_led[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        24.333ns  (logic 6.215ns (25.541%)  route 18.118ns (74.459%))
+  Logic Levels:           12  (CARRY4=1 LDCE=1 LUT2=1 LUT3=1 LUT6=3 MUXF7=2 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y37          LDCE                         0.000     0.000 r  player1/o_next_position_reg[y][4]/G
+    SLICE_X6Y37          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  player1/o_next_position_reg[y][4]/Q
+                         net (fo=43, routed)          1.884     2.509    player1/player1_next_position[y][4]
+    SLICE_X5Y42          LUT3 (Prop_lut3_I0_O)        0.124     2.633 r  player1/o_led_OBUF[3]_inst_i_61/O
+                         net (fo=1, routed)           0.000     2.633    player1/o_led_OBUF[3]_inst_i_61_n_0
+    SLICE_X5Y42          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247     2.880 r  player1/o_led_OBUF[3]_inst_i_21/O[0]
+                         net (fo=223, routed)         9.691    12.571    map/o_led_OBUF[3]_inst_i_37_0[0]
+    SLICE_X1Y77          LUT6 (Prop_lut6_I4_O)        0.299    12.870 f  map/o_led_OBUF[3]_inst_i_357/O
+                         net (fo=1, routed)           0.000    12.870    map/o_led_OBUF[3]_inst_i_357_n_0
+    SLICE_X1Y77          MUXF7 (Prop_muxf7_I1_O)      0.245    13.115 f  map/o_led_OBUF[3]_inst_i_190/O
+                         net (fo=1, routed)           0.000    13.115    map/o_led_OBUF[3]_inst_i_190_n_0
+    SLICE_X1Y77          MUXF8 (Prop_muxf8_I0_O)      0.104    13.219 f  map/o_led_OBUF[3]_inst_i_95/O
+                         net (fo=1, routed)           1.541    14.760    map/o_led_OBUF[3]_inst_i_95_n_0
+    SLICE_X5Y65          LUT6 (Prop_lut6_I1_O)        0.316    15.076 f  map/o_led_OBUF[3]_inst_i_36/O
+                         net (fo=1, routed)           0.000    15.076    map/o_led_OBUF[3]_inst_i_36_n_0
+    SLICE_X5Y65          MUXF7 (Prop_muxf7_I0_O)      0.212    15.288 f  map/o_led_OBUF[3]_inst_i_12/O
+                         net (fo=1, routed)           0.000    15.288    map/o_led_OBUF[3]_inst_i_12_n_0
+    SLICE_X5Y65          MUXF8 (Prop_muxf8_I1_O)      0.094    15.382 f  map/o_led_OBUF[3]_inst_i_4/O
+                         net (fo=1, routed)           1.444    16.826    map/o_led_OBUF[3]_inst_i_4_n_0
+    SLICE_X6Y48          LUT6 (Prop_lut6_I1_O)        0.316    17.142 r  map/o_led_OBUF[3]_inst_i_2/O
+                         net (fo=2, routed)           1.872    19.014    map/TL
+    SLICE_X0Y19          LUT2 (Prop_lut2_I1_O)        0.124    19.138 r  map/o_led_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           1.686    20.824    o_led_OBUF[3]
+    V19                  OBUF (Prop_obuf_I_O)         3.509    24.333 r  o_led_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    24.333    o_led[3]
+    V19                                                               r  o_led[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[y][4]/G
+                            (positive level-sensitive latch)
+  Destination:            o_led[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        22.273ns  (logic 6.647ns (29.842%)  route 15.626ns (70.158%))
+  Logic Levels:           11  (CARRY4=1 LDCE=1 LUT2=1 LUT4=1 LUT6=2 MUXF7=2 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y37          LDCE                         0.000     0.000 r  player1/o_next_position_reg[y][4]/G
+    SLICE_X6Y37          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  player1/o_next_position_reg[y][4]/Q
+                         net (fo=43, routed)          1.609     2.234    player1/player1_next_position[y][4]
+    SLICE_X6Y40          LUT4 (Prop_lut4_I3_O)        0.124     2.358 r  player1/o_led_OBUF[0]_inst_i_53/O
+                         net (fo=1, routed)           0.801     3.159    player1/o_led_OBUF[0]_inst_i_53_n_0
+    SLICE_X6Y42          CARRY4 (Prop_carry4_DI[1]_O[2])
+                                                      0.547     3.706 r  player1/o_led_OBUF[0]_inst_i_20/O[2]
+                         net (fo=112, routed)         7.300    11.006    map/o_led_OBUF[0]_inst_i_36_0[2]
+    SLICE_X8Y61          MUXF7 (Prop_muxf7_S_O)       0.469    11.475 f  map/o_led_OBUF[0]_inst_i_230/O
+                         net (fo=1, routed)           0.000    11.475    map/o_led_OBUF[0]_inst_i_230_n_0
+    SLICE_X8Y61          MUXF8 (Prop_muxf8_I1_O)      0.088    11.563 f  map/o_led_OBUF[0]_inst_i_120/O
+                         net (fo=1, routed)           0.851    12.414    map/o_led_OBUF[0]_inst_i_120_n_0
+    SLICE_X10Y66         LUT6 (Prop_lut6_I1_O)        0.319    12.733 f  map/o_led_OBUF[0]_inst_i_50/O
+                         net (fo=1, routed)           0.000    12.733    map/o_led_OBUF[0]_inst_i_50_n_0
+    SLICE_X10Y66         MUXF7 (Prop_muxf7_I0_O)      0.209    12.942 f  map/o_led_OBUF[0]_inst_i_19/O
+                         net (fo=1, routed)           0.000    12.942    map/o_led_OBUF[0]_inst_i_19_n_0
+    SLICE_X10Y66         MUXF8 (Prop_muxf8_I1_O)      0.088    13.030 f  map/o_led_OBUF[0]_inst_i_7/O
+                         net (fo=1, routed)           1.199    14.229    map/o_led_OBUF[0]_inst_i_7_n_0
+    SLICE_X5Y46          LUT6 (Prop_lut6_I5_O)        0.319    14.548 r  map/o_led_OBUF[0]_inst_i_2/O
+                         net (fo=2, routed)           0.947    15.495    map/BR
+    SLICE_X2Y38          LUT2 (Prop_lut2_I1_O)        0.150    15.645 r  map/o_led_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           2.920    18.564    o_led_OBUF[0]
+    U16                  OBUF (Prop_obuf_I_O)         3.709    22.273 r  o_led_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    22.273    o_led[0]
+    U16                                                               r  o_led[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[x][4]/G
+                            (positive level-sensitive latch)
+  Destination:            o_led[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        21.047ns  (logic 6.453ns (30.659%)  route 14.594ns (69.341%))
+  Logic Levels:           12  (CARRY4=1 LDCE=1 LUT2=1 LUT4=1 LUT6=3 MUXF7=2 MUXF8=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y37         LDCE                         0.000     0.000 r  player1/o_next_position_reg[x][4]/G
+    SLICE_X10Y37         LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  player1/o_next_position_reg[x][4]/Q
+                         net (fo=12, routed)          2.200     2.825    player1/player1_next_position[x][4]
+    SLICE_X7Y42          LUT4 (Prop_lut4_I3_O)        0.124     2.949 r  player1/o_led_OBUF[1]_inst_i_61/O
+                         net (fo=1, routed)           0.000     2.949    player1/o_led_OBUF[1]_inst_i_61_n_0
+    SLICE_X7Y42          CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424     3.373 r  player1/o_led_OBUF[1]_inst_i_21/O[1]
+                         net (fo=223, routed)         7.255    10.628    map/o_led_OBUF[1]_inst_i_37_0[1]
+    SLICE_X5Y81          LUT6 (Prop_lut6_I2_O)        0.303    10.931 f  map/o_led_OBUF[1]_inst_i_329/O
+                         net (fo=1, routed)           0.000    10.931    map/o_led_OBUF[1]_inst_i_329_n_0
+    SLICE_X5Y81          MUXF7 (Prop_muxf7_I1_O)      0.245    11.176 f  map/o_led_OBUF[1]_inst_i_176/O
+                         net (fo=1, routed)           0.000    11.176    map/o_led_OBUF[1]_inst_i_176_n_0
+    SLICE_X5Y81          MUXF8 (Prop_muxf8_I0_O)      0.104    11.280 f  map/o_led_OBUF[1]_inst_i_88/O
+                         net (fo=1, routed)           1.517    12.797    map/o_led_OBUF[1]_inst_i_88_n_0
+    SLICE_X6Y68          LUT6 (Prop_lut6_I3_O)        0.316    13.113 f  map/o_led_OBUF[1]_inst_i_34/O
+                         net (fo=1, routed)           0.000    13.113    map/o_led_OBUF[1]_inst_i_34_n_0
+    SLICE_X6Y68          MUXF7 (Prop_muxf7_I0_O)      0.241    13.354 f  map/o_led_OBUF[1]_inst_i_11/O
+                         net (fo=1, routed)           0.000    13.354    map/o_led_OBUF[1]_inst_i_11_n_0
+    SLICE_X6Y68          MUXF8 (Prop_muxf8_I0_O)      0.098    13.452 f  map/o_led_OBUF[1]_inst_i_4/O
+                         net (fo=1, routed)           1.044    14.496    map/o_led_OBUF[1]_inst_i_4_n_0
+    SLICE_X6Y48          LUT6 (Prop_lut6_I1_O)        0.319    14.815 r  map/o_led_OBUF[1]_inst_i_2/O
+                         net (fo=2, routed)           0.869    15.684    map/BL
+    SLICE_X0Y39          LUT2 (Prop_lut2_I1_O)        0.124    15.808 r  map/o_led_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           1.709    17.517    o_led_OBUF[1]
+    E19                  OBUF (Prop_obuf_I_O)         3.530    21.047 r  o_led_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    21.047    o_led[1]
+    E19                                                               r  o_led[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[y][4]/G
+                            (positive level-sensitive latch)
+  Destination:            player1/o_player_pos_reg[x][10]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        20.842ns  (logic 2.742ns (13.156%)  route 18.100ns (86.844%))
+  Logic Levels:           11  (CARRY4=1 LDCE=1 LUT4=1 LUT5=1 LUT6=3 MUXF7=2 MUXF8=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y37          LDCE                         0.000     0.000 r  player1/o_next_position_reg[y][4]/G
+    SLICE_X6Y37          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  player1/o_next_position_reg[y][4]/Q
+                         net (fo=43, routed)          2.074     2.699    player1/player1_next_position[y][4]
+    SLICE_X4Y42          LUT5 (Prop_lut5_I0_O)        0.124     2.823 r  player1/o_led_OBUF[2]_inst_i_60/O
+                         net (fo=1, routed)           0.000     2.823    player1/o_led_OBUF[2]_inst_i_60_n_0
+    SLICE_X4Y42          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247     3.070 r  player1/o_led_OBUF[2]_inst_i_20/O[0]
+                         net (fo=223, routed)        11.281    14.350    map/o_led_OBUF[2]_inst_i_36_0[0]
+    SLICE_X11Y52         LUT6 (Prop_lut6_I4_O)        0.299    14.649 r  map/o_led_OBUF[2]_inst_i_260/O
+                         net (fo=1, routed)           0.000    14.649    map/o_led_OBUF[2]_inst_i_260_n_0
+    SLICE_X11Y52         MUXF7 (Prop_muxf7_I1_O)      0.245    14.894 r  map/o_led_OBUF[2]_inst_i_137/O
+                         net (fo=1, routed)           0.000    14.894    map/o_led_OBUF[2]_inst_i_137_n_0
+    SLICE_X11Y52         MUXF8 (Prop_muxf8_I0_O)      0.104    14.998 r  map/o_led_OBUF[2]_inst_i_66/O
+                         net (fo=1, routed)           1.186    16.184    map/o_led_OBUF[2]_inst_i_66_n_0
+    SLICE_X11Y47         LUT6 (Prop_lut6_I5_O)        0.316    16.500 r  map/o_led_OBUF[2]_inst_i_29/O
+                         net (fo=1, routed)           0.000    16.500    map/o_led_OBUF[2]_inst_i_29_n_0
+    SLICE_X11Y47         MUXF7 (Prop_muxf7_I0_O)      0.238    16.738 r  map/o_led_OBUF[2]_inst_i_9/O
+                         net (fo=1, routed)           0.000    16.738    map/o_led_OBUF[2]_inst_i_9_n_0
+    SLICE_X11Y47         MUXF8 (Prop_muxf8_I0_O)      0.104    16.842 r  map/o_led_OBUF[2]_inst_i_3/O
+                         net (fo=1, routed)           0.886    17.728    map/o_led_OBUF[2]_inst_i_3_n_0
+    SLICE_X5Y47          LUT6 (Prop_lut6_I0_O)        0.316    18.044 f  map/o_led_OBUF[2]_inst_i_2/O
+                         net (fo=2, routed)           1.200    19.244    map/TR
+    SLICE_X2Y38          LUT4 (Prop_lut4_I2_O)        0.124    19.368 r  map/o_player_pos[x][10]_i_1/O
+                         net (fo=18, routed)          1.474    20.842    player1/o_player_pos_reg[y][2]_0
+    SLICE_X10Y39         FDRE                                         r  player1/o_player_pos_reg[x][10]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[y][4]/G
+                            (positive level-sensitive latch)
+  Destination:            player1/o_player_pos_reg[x][9]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        20.842ns  (logic 2.742ns (13.156%)  route 18.100ns (86.844%))
+  Logic Levels:           11  (CARRY4=1 LDCE=1 LUT4=1 LUT5=1 LUT6=3 MUXF7=2 MUXF8=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y37          LDCE                         0.000     0.000 r  player1/o_next_position_reg[y][4]/G
+    SLICE_X6Y37          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  player1/o_next_position_reg[y][4]/Q
+                         net (fo=43, routed)          2.074     2.699    player1/player1_next_position[y][4]
+    SLICE_X4Y42          LUT5 (Prop_lut5_I0_O)        0.124     2.823 r  player1/o_led_OBUF[2]_inst_i_60/O
+                         net (fo=1, routed)           0.000     2.823    player1/o_led_OBUF[2]_inst_i_60_n_0
+    SLICE_X4Y42          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247     3.070 r  player1/o_led_OBUF[2]_inst_i_20/O[0]
+                         net (fo=223, routed)        11.281    14.350    map/o_led_OBUF[2]_inst_i_36_0[0]
+    SLICE_X11Y52         LUT6 (Prop_lut6_I4_O)        0.299    14.649 r  map/o_led_OBUF[2]_inst_i_260/O
+                         net (fo=1, routed)           0.000    14.649    map/o_led_OBUF[2]_inst_i_260_n_0
+    SLICE_X11Y52         MUXF7 (Prop_muxf7_I1_O)      0.245    14.894 r  map/o_led_OBUF[2]_inst_i_137/O
+                         net (fo=1, routed)           0.000    14.894    map/o_led_OBUF[2]_inst_i_137_n_0
+    SLICE_X11Y52         MUXF8 (Prop_muxf8_I0_O)      0.104    14.998 r  map/o_led_OBUF[2]_inst_i_66/O
+                         net (fo=1, routed)           1.186    16.184    map/o_led_OBUF[2]_inst_i_66_n_0
+    SLICE_X11Y47         LUT6 (Prop_lut6_I5_O)        0.316    16.500 r  map/o_led_OBUF[2]_inst_i_29/O
+                         net (fo=1, routed)           0.000    16.500    map/o_led_OBUF[2]_inst_i_29_n_0
+    SLICE_X11Y47         MUXF7 (Prop_muxf7_I0_O)      0.238    16.738 r  map/o_led_OBUF[2]_inst_i_9/O
+                         net (fo=1, routed)           0.000    16.738    map/o_led_OBUF[2]_inst_i_9_n_0
+    SLICE_X11Y47         MUXF8 (Prop_muxf8_I0_O)      0.104    16.842 r  map/o_led_OBUF[2]_inst_i_3/O
+                         net (fo=1, routed)           0.886    17.728    map/o_led_OBUF[2]_inst_i_3_n_0
+    SLICE_X5Y47          LUT6 (Prop_lut6_I0_O)        0.316    18.044 f  map/o_led_OBUF[2]_inst_i_2/O
+                         net (fo=2, routed)           1.200    19.244    map/TR
+    SLICE_X2Y38          LUT4 (Prop_lut4_I2_O)        0.124    19.368 r  map/o_player_pos[x][10]_i_1/O
+                         net (fo=18, routed)          1.474    20.842    player1/o_player_pos_reg[y][2]_0
+    SLICE_X10Y39         FDRE                                         r  player1/o_player_pos_reg[x][9]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[y][4]/G
+                            (positive level-sensitive latch)
+  Destination:            player1/o_player_pos_reg[x][4]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        20.559ns  (logic 2.742ns (13.338%)  route 17.817ns (86.662%))
+  Logic Levels:           11  (CARRY4=1 LDCE=1 LUT4=1 LUT5=1 LUT6=3 MUXF7=2 MUXF8=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y37          LDCE                         0.000     0.000 r  player1/o_next_position_reg[y][4]/G
+    SLICE_X6Y37          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  player1/o_next_position_reg[y][4]/Q
+                         net (fo=43, routed)          2.074     2.699    player1/player1_next_position[y][4]
+    SLICE_X4Y42          LUT5 (Prop_lut5_I0_O)        0.124     2.823 r  player1/o_led_OBUF[2]_inst_i_60/O
+                         net (fo=1, routed)           0.000     2.823    player1/o_led_OBUF[2]_inst_i_60_n_0
+    SLICE_X4Y42          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247     3.070 r  player1/o_led_OBUF[2]_inst_i_20/O[0]
+                         net (fo=223, routed)        11.281    14.350    map/o_led_OBUF[2]_inst_i_36_0[0]
+    SLICE_X11Y52         LUT6 (Prop_lut6_I4_O)        0.299    14.649 r  map/o_led_OBUF[2]_inst_i_260/O
+                         net (fo=1, routed)           0.000    14.649    map/o_led_OBUF[2]_inst_i_260_n_0
+    SLICE_X11Y52         MUXF7 (Prop_muxf7_I1_O)      0.245    14.894 r  map/o_led_OBUF[2]_inst_i_137/O
+                         net (fo=1, routed)           0.000    14.894    map/o_led_OBUF[2]_inst_i_137_n_0
+    SLICE_X11Y52         MUXF8 (Prop_muxf8_I0_O)      0.104    14.998 r  map/o_led_OBUF[2]_inst_i_66/O
+                         net (fo=1, routed)           1.186    16.184    map/o_led_OBUF[2]_inst_i_66_n_0
+    SLICE_X11Y47         LUT6 (Prop_lut6_I5_O)        0.316    16.500 r  map/o_led_OBUF[2]_inst_i_29/O
+                         net (fo=1, routed)           0.000    16.500    map/o_led_OBUF[2]_inst_i_29_n_0
+    SLICE_X11Y47         MUXF7 (Prop_muxf7_I0_O)      0.238    16.738 r  map/o_led_OBUF[2]_inst_i_9/O
+                         net (fo=1, routed)           0.000    16.738    map/o_led_OBUF[2]_inst_i_9_n_0
+    SLICE_X11Y47         MUXF8 (Prop_muxf8_I0_O)      0.104    16.842 r  map/o_led_OBUF[2]_inst_i_3/O
+                         net (fo=1, routed)           0.886    17.728    map/o_led_OBUF[2]_inst_i_3_n_0
+    SLICE_X5Y47          LUT6 (Prop_lut6_I0_O)        0.316    18.044 f  map/o_led_OBUF[2]_inst_i_2/O
+                         net (fo=2, routed)           1.200    19.244    map/TR
+    SLICE_X2Y38          LUT4 (Prop_lut4_I2_O)        0.124    19.368 r  map/o_player_pos[x][10]_i_1/O
+                         net (fo=18, routed)          1.191    20.559    player1/o_player_pos_reg[y][2]_0
+    SLICE_X9Y37          FDRE                                         r  player1/o_player_pos_reg[x][4]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[y][4]/G
+                            (positive level-sensitive latch)
+  Destination:            player1/o_player_pos_reg[x][6]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        20.559ns  (logic 2.742ns (13.338%)  route 17.817ns (86.662%))
+  Logic Levels:           11  (CARRY4=1 LDCE=1 LUT4=1 LUT5=1 LUT6=3 MUXF7=2 MUXF8=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y37          LDCE                         0.000     0.000 r  player1/o_next_position_reg[y][4]/G
+    SLICE_X6Y37          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  player1/o_next_position_reg[y][4]/Q
+                         net (fo=43, routed)          2.074     2.699    player1/player1_next_position[y][4]
+    SLICE_X4Y42          LUT5 (Prop_lut5_I0_O)        0.124     2.823 r  player1/o_led_OBUF[2]_inst_i_60/O
+                         net (fo=1, routed)           0.000     2.823    player1/o_led_OBUF[2]_inst_i_60_n_0
+    SLICE_X4Y42          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247     3.070 r  player1/o_led_OBUF[2]_inst_i_20/O[0]
+                         net (fo=223, routed)        11.281    14.350    map/o_led_OBUF[2]_inst_i_36_0[0]
+    SLICE_X11Y52         LUT6 (Prop_lut6_I4_O)        0.299    14.649 r  map/o_led_OBUF[2]_inst_i_260/O
+                         net (fo=1, routed)           0.000    14.649    map/o_led_OBUF[2]_inst_i_260_n_0
+    SLICE_X11Y52         MUXF7 (Prop_muxf7_I1_O)      0.245    14.894 r  map/o_led_OBUF[2]_inst_i_137/O
+                         net (fo=1, routed)           0.000    14.894    map/o_led_OBUF[2]_inst_i_137_n_0
+    SLICE_X11Y52         MUXF8 (Prop_muxf8_I0_O)      0.104    14.998 r  map/o_led_OBUF[2]_inst_i_66/O
+                         net (fo=1, routed)           1.186    16.184    map/o_led_OBUF[2]_inst_i_66_n_0
+    SLICE_X11Y47         LUT6 (Prop_lut6_I5_O)        0.316    16.500 r  map/o_led_OBUF[2]_inst_i_29/O
+                         net (fo=1, routed)           0.000    16.500    map/o_led_OBUF[2]_inst_i_29_n_0
+    SLICE_X11Y47         MUXF7 (Prop_muxf7_I0_O)      0.238    16.738 r  map/o_led_OBUF[2]_inst_i_9/O
+                         net (fo=1, routed)           0.000    16.738    map/o_led_OBUF[2]_inst_i_9_n_0
+    SLICE_X11Y47         MUXF8 (Prop_muxf8_I0_O)      0.104    16.842 r  map/o_led_OBUF[2]_inst_i_3/O
+                         net (fo=1, routed)           0.886    17.728    map/o_led_OBUF[2]_inst_i_3_n_0
+    SLICE_X5Y47          LUT6 (Prop_lut6_I0_O)        0.316    18.044 f  map/o_led_OBUF[2]_inst_i_2/O
+                         net (fo=2, routed)           1.200    19.244    map/TR
+    SLICE_X2Y38          LUT4 (Prop_lut4_I2_O)        0.124    19.368 r  map/o_player_pos[x][10]_i_1/O
+                         net (fo=18, routed)          1.191    20.559    player1/o_player_pos_reg[y][2]_0
+    SLICE_X9Y37          FDRE                                         r  player1/o_player_pos_reg[x][6]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[y][4]/G
+                            (positive level-sensitive latch)
+  Destination:            player1/o_player_pos_reg[x][7]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        20.559ns  (logic 2.742ns (13.338%)  route 17.817ns (86.662%))
+  Logic Levels:           11  (CARRY4=1 LDCE=1 LUT4=1 LUT5=1 LUT6=3 MUXF7=2 MUXF8=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y37          LDCE                         0.000     0.000 r  player1/o_next_position_reg[y][4]/G
+    SLICE_X6Y37          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  player1/o_next_position_reg[y][4]/Q
+                         net (fo=43, routed)          2.074     2.699    player1/player1_next_position[y][4]
+    SLICE_X4Y42          LUT5 (Prop_lut5_I0_O)        0.124     2.823 r  player1/o_led_OBUF[2]_inst_i_60/O
+                         net (fo=1, routed)           0.000     2.823    player1/o_led_OBUF[2]_inst_i_60_n_0
+    SLICE_X4Y42          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247     3.070 r  player1/o_led_OBUF[2]_inst_i_20/O[0]
+                         net (fo=223, routed)        11.281    14.350    map/o_led_OBUF[2]_inst_i_36_0[0]
+    SLICE_X11Y52         LUT6 (Prop_lut6_I4_O)        0.299    14.649 r  map/o_led_OBUF[2]_inst_i_260/O
+                         net (fo=1, routed)           0.000    14.649    map/o_led_OBUF[2]_inst_i_260_n_0
+    SLICE_X11Y52         MUXF7 (Prop_muxf7_I1_O)      0.245    14.894 r  map/o_led_OBUF[2]_inst_i_137/O
+                         net (fo=1, routed)           0.000    14.894    map/o_led_OBUF[2]_inst_i_137_n_0
+    SLICE_X11Y52         MUXF8 (Prop_muxf8_I0_O)      0.104    14.998 r  map/o_led_OBUF[2]_inst_i_66/O
+                         net (fo=1, routed)           1.186    16.184    map/o_led_OBUF[2]_inst_i_66_n_0
+    SLICE_X11Y47         LUT6 (Prop_lut6_I5_O)        0.316    16.500 r  map/o_led_OBUF[2]_inst_i_29/O
+                         net (fo=1, routed)           0.000    16.500    map/o_led_OBUF[2]_inst_i_29_n_0
+    SLICE_X11Y47         MUXF7 (Prop_muxf7_I0_O)      0.238    16.738 r  map/o_led_OBUF[2]_inst_i_9/O
+                         net (fo=1, routed)           0.000    16.738    map/o_led_OBUF[2]_inst_i_9_n_0
+    SLICE_X11Y47         MUXF8 (Prop_muxf8_I0_O)      0.104    16.842 r  map/o_led_OBUF[2]_inst_i_3/O
+                         net (fo=1, routed)           0.886    17.728    map/o_led_OBUF[2]_inst_i_3_n_0
+    SLICE_X5Y47          LUT6 (Prop_lut6_I0_O)        0.316    18.044 f  map/o_led_OBUF[2]_inst_i_2/O
+                         net (fo=2, routed)           1.200    19.244    map/TR
+    SLICE_X2Y38          LUT4 (Prop_lut4_I2_O)        0.124    19.368 r  map/o_player_pos[x][10]_i_1/O
+                         net (fo=18, routed)          1.191    20.559    player1/o_player_pos_reg[y][2]_0
+    SLICE_X9Y37          FDRE                                         r  player1/o_player_pos_reg[x][7]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[y][4]/G
+                            (positive level-sensitive latch)
+  Destination:            player1/o_player_pos_reg[x][3]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        20.419ns  (logic 2.742ns (13.429%)  route 17.677ns (86.571%))
+  Logic Levels:           11  (CARRY4=1 LDCE=1 LUT4=1 LUT5=1 LUT6=3 MUXF7=2 MUXF8=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y37          LDCE                         0.000     0.000 r  player1/o_next_position_reg[y][4]/G
+    SLICE_X6Y37          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  player1/o_next_position_reg[y][4]/Q
+                         net (fo=43, routed)          2.074     2.699    player1/player1_next_position[y][4]
+    SLICE_X4Y42          LUT5 (Prop_lut5_I0_O)        0.124     2.823 r  player1/o_led_OBUF[2]_inst_i_60/O
+                         net (fo=1, routed)           0.000     2.823    player1/o_led_OBUF[2]_inst_i_60_n_0
+    SLICE_X4Y42          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247     3.070 r  player1/o_led_OBUF[2]_inst_i_20/O[0]
+                         net (fo=223, routed)        11.281    14.350    map/o_led_OBUF[2]_inst_i_36_0[0]
+    SLICE_X11Y52         LUT6 (Prop_lut6_I4_O)        0.299    14.649 r  map/o_led_OBUF[2]_inst_i_260/O
+                         net (fo=1, routed)           0.000    14.649    map/o_led_OBUF[2]_inst_i_260_n_0
+    SLICE_X11Y52         MUXF7 (Prop_muxf7_I1_O)      0.245    14.894 r  map/o_led_OBUF[2]_inst_i_137/O
+                         net (fo=1, routed)           0.000    14.894    map/o_led_OBUF[2]_inst_i_137_n_0
+    SLICE_X11Y52         MUXF8 (Prop_muxf8_I0_O)      0.104    14.998 r  map/o_led_OBUF[2]_inst_i_66/O
+                         net (fo=1, routed)           1.186    16.184    map/o_led_OBUF[2]_inst_i_66_n_0
+    SLICE_X11Y47         LUT6 (Prop_lut6_I5_O)        0.316    16.500 r  map/o_led_OBUF[2]_inst_i_29/O
+                         net (fo=1, routed)           0.000    16.500    map/o_led_OBUF[2]_inst_i_29_n_0
+    SLICE_X11Y47         MUXF7 (Prop_muxf7_I0_O)      0.238    16.738 r  map/o_led_OBUF[2]_inst_i_9/O
+                         net (fo=1, routed)           0.000    16.738    map/o_led_OBUF[2]_inst_i_9_n_0
+    SLICE_X11Y47         MUXF8 (Prop_muxf8_I0_O)      0.104    16.842 r  map/o_led_OBUF[2]_inst_i_3/O
+                         net (fo=1, routed)           0.886    17.728    map/o_led_OBUF[2]_inst_i_3_n_0
+    SLICE_X5Y47          LUT6 (Prop_lut6_I0_O)        0.316    18.044 f  map/o_led_OBUF[2]_inst_i_2/O
+                         net (fo=2, routed)           1.200    19.244    map/TR
+    SLICE_X2Y38          LUT4 (Prop_lut4_I2_O)        0.124    19.368 r  map/o_player_pos[x][10]_i_1/O
+                         net (fo=18, routed)          1.051    20.419    player1/o_player_pos_reg[y][2]_0
+    SLICE_X9Y38          FDRE                                         r  player1/o_player_pos_reg[x][3]/CE
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[y][8]/G
+                            (positive level-sensitive latch)
+  Destination:            player1/o_player_pos_reg[y][8]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.267ns  (logic 0.158ns (59.162%)  route 0.109ns (40.838%))
+  Logic Levels:           1  (LDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y38          LDCE                         0.000     0.000 r  player1/o_next_position_reg[y][8]/G
+    SLICE_X5Y38          LDCE (EnToQ_ldce_G_Q)        0.158     0.158 r  player1/o_next_position_reg[y][8]/Q
+                         net (fo=12, routed)          0.109     0.267    player1/player1_next_position[y][8]
+    SLICE_X4Y38          FDRE                                         r  player1/o_player_pos_reg[y][8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[x][5]/G
+                            (positive level-sensitive latch)
+  Destination:            player1/o_player_pos_reg[x][5]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.282ns  (logic 0.158ns (55.988%)  route 0.124ns (44.012%))
+  Logic Levels:           1  (LDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y39          LDCE                         0.000     0.000 r  player1/o_next_position_reg[x][5]/G
+    SLICE_X9Y39          LDCE (EnToQ_ldce_G_Q)        0.158     0.158 r  player1/o_next_position_reg[x][5]/Q
+                         net (fo=10, routed)          0.124     0.282    player1/player1_next_position[x][5]
+    SLICE_X9Y38          FDRE                                         r  player1/o_player_pos_reg[x][5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[x][2]/G
+                            (positive level-sensitive latch)
+  Destination:            player1/o_player_pos_reg[x][2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.286ns  (logic 0.158ns (55.187%)  route 0.128ns (44.813%))
+  Logic Levels:           1  (LDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y38          LDCE                         0.000     0.000 r  player1/o_next_position_reg[x][2]/G
+    SLICE_X7Y38          LDCE (EnToQ_ldce_G_Q)        0.158     0.158 r  player1/o_next_position_reg[x][2]/Q
+                         net (fo=10, routed)          0.128     0.286    player1/player1_next_position[x][2]
+    SLICE_X6Y38          FDRE                                         r  player1/o_player_pos_reg[x][2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[y][3]/G
+                            (positive level-sensitive latch)
+  Destination:            player1/o_player_pos_reg[y][3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.296ns  (logic 0.158ns (53.293%)  route 0.138ns (46.707%))
+  Logic Levels:           1  (LDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y39          LDCE                         0.000     0.000 r  player1/o_next_position_reg[y][3]/G
+    SLICE_X5Y39          LDCE (EnToQ_ldce_G_Q)        0.158     0.158 r  player1/o_next_position_reg[y][3]/Q
+                         net (fo=43, routed)          0.138     0.296    player1/player1_next_position[y][3]
+    SLICE_X6Y39          FDRE                                         r  player1/o_player_pos_reg[y][3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_player_pos_reg[x][2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            player1/o_next_position_reg[x][2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.303ns  (logic 0.209ns (68.908%)  route 0.094ns (31.092%))
+  Logic Levels:           2  (FDRE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y38          FDRE                         0.000     0.000 r  player1/o_player_pos_reg[x][2]/C
+    SLICE_X6Y38          FDRE (Prop_fdre_C_Q)         0.164     0.164 r  player1/o_player_pos_reg[x][2]/Q
+                         net (fo=15, routed)          0.094     0.258    player1/o_player_pos[x][0]
+    SLICE_X7Y38          LUT3 (Prop_lut3_I1_O)        0.045     0.303 r  player1/o_next_position_reg[x][2]_i_1/O
+                         net (fo=1, routed)           0.000     0.303    player1/o_next_position_reg[x][2]_i_1_n_0
+    SLICE_X7Y38          LDCE                                         r  player1/o_next_position_reg[x][2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[x][10]/G
+                            (positive level-sensitive latch)
+  Destination:            player1/o_player_pos_reg[x][10]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.304ns  (logic 0.178ns (58.641%)  route 0.126ns (41.359%))
+  Logic Levels:           1  (LDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y38         LDCE                         0.000     0.000 r  player1/o_next_position_reg[x][10]/G
+    SLICE_X10Y38         LDCE (EnToQ_ldce_G_Q)        0.178     0.178 r  player1/o_next_position_reg[x][10]/Q
+                         net (fo=16, routed)          0.126     0.304    player1/player1_next_position[x][10]
+    SLICE_X10Y39         FDRE                                         r  player1/o_player_pos_reg[x][10]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 player1/o_next_position_reg[x][3]/G
+                            (positive level-sensitive latch)
+  Destination:            player1/o_player_pos_reg[x][3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.304ns  (logic 0.178ns (58.525%)  route 0.126ns (41.475%))
+  Logic Levels:           1  (LDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y38         LDCE                         0.000     0.000 r  player1/o_next_position_reg[x][3]/G
+    SLICE_X10Y38         LDCE (EnToQ_ldce_G_Q)        0.178     0.178 r  player1/o_next_position_reg[x][3]/Q
+                         net (fo=10, routed)          0.126     0.304    player1/player1_next_position[x][3]
+    SLICE_X9Y38          FDRE                                         r  player1/o_player_pos_reg[x][3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 map/o_blocked_tiles_reg[520]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            map/o_blocked_tiles_reg[520]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.308ns  (logic 0.186ns (60.473%)  route 0.122ns (39.527%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y50          FDRE                         0.000     0.000 r  map/o_blocked_tiles_reg[520]/C
+    SLICE_X7Y50          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  map/o_blocked_tiles_reg[520]/Q
+                         net (fo=5, routed)           0.122     0.263    display_signal/o_blocked_tiles[520]
+    SLICE_X7Y50          LUT6 (Prop_lut6_I5_O)        0.045     0.308 r  display_signal/o_blocked_tiles[520]_i_1/O
+                         net (fo=1, routed)           0.000     0.308    map/o_blocked_tiles_reg[520]_0
+    SLICE_X7Y50          FDRE                                         r  map/o_blocked_tiles_reg[520]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 map/o_blocked_tiles_reg[566]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            map/o_blocked_tiles_reg[566]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.309ns  (logic 0.186ns (60.289%)  route 0.123ns (39.711%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y40          FDRE                         0.000     0.000 r  map/o_blocked_tiles_reg[566]/C
+    SLICE_X1Y40          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  map/o_blocked_tiles_reg[566]/Q
+                         net (fo=5, routed)           0.123     0.264    display_signal/o_blocked_tiles[566]
+    SLICE_X1Y40          LUT6 (Prop_lut6_I5_O)        0.045     0.309 r  display_signal/o_blocked_tiles[566]_i_1/O
+                         net (fo=1, routed)           0.000     0.309    map/o_blocked_tiles_reg[566]_0
+    SLICE_X1Y40          FDRE                                         r  map/o_blocked_tiles_reg[566]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 map/o_blocked_tiles_reg[732]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            map/o_blocked_tiles_reg[732]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.313ns  (logic 0.186ns (59.380%)  route 0.127ns (40.620%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y79          FDRE                         0.000     0.000 r  map/o_blocked_tiles_reg[732]/C
+    SLICE_X1Y79          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  map/o_blocked_tiles_reg[732]/Q
+                         net (fo=5, routed)           0.127     0.268    display_signal/o_blocked_tiles[732]
+    SLICE_X1Y79          LUT6 (Prop_lut6_I5_O)        0.045     0.313 r  display_signal/o_blocked_tiles[732]_i_1/O
+                         net (fo=1, routed)           0.000     0.313    map/o_blocked_tiles_reg[732]_0
+    SLICE_X1Y79          FDRE                                         r  map/o_blocked_tiles_reg[732]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

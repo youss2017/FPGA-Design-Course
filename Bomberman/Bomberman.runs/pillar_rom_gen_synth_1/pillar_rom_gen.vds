@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Dec  2 21:34:46 2024
+# Process ID: 52172
+# Current directory: C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/pillar_rom_gen_synth_1
+# Command line: vivado.exe -log pillar_rom_gen.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pillar_rom_gen.tcl
+# Log file: C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/pillar_rom_gen_synth_1/pillar_rom_gen.vds
+# Journal file: C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/pillar_rom_gen_synth_1\vivado.jou
+# Running On        :DESKTOP-339EFSV
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 7 5700X3D 8-Core Processor           
+# CPU Frequency     :3000 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :51481 MB
+# Swap memory       :23987 MB
+# Total Virtual     :75468 MB
+# Available Virtual :26242 MB
+#-----------------------------------------------------------
+source pillar_rom_gen.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 508.539 ; gain = 201.129
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: pillar_rom_gen
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 93054848c272f058 to dir: C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/pillar_rom_gen_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.cache/ip/2024.1/9/3/93054848c272f058/pillar_rom_gen.dcp to C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/pillar_rom_gen_synth_1/pillar_rom_gen.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.cache/ip/2024.1/9/3/93054848c272f058/pillar_rom_gen_sim_netlist.v to C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/pillar_rom_gen_synth_1/pillar_rom_gen_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.cache/ip/2024.1/9/3/93054848c272f058/pillar_rom_gen_sim_netlist.vhdl to C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/pillar_rom_gen_synth_1/pillar_rom_gen_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.cache/ip/2024.1/9/3/93054848c272f058/pillar_rom_gen_stub.v to C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/pillar_rom_gen_synth_1/pillar_rom_gen_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.cache/ip/2024.1/9/3/93054848c272f058/pillar_rom_gen_stub.vhdl to C:/Users/youssef/Desktop/DigitalSystems/Bomberman/Bomberman.runs/pillar_rom_gen_synth_1/pillar_rom_gen_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP pillar_rom_gen, cache-ID = 93054848c272f058.
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  2 21:34:58 2024...

@@ -1,0 +1,87 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Dec  3 11:35:09 2024
+| Host         : DESKTOP-339EFSV running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file bomberman_game_control_sets_placed.rpt
+| Design       : bomberman_game
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     9 |
+|    Minimum number of control sets                        |     9 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    47 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     9 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             924 |          290 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              29 |           17 |
+| Yes          | No                    | No                     |              40 |           14 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------+----------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+|                 Clock Signal                |                    Enable Signal                   |              Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------------------+----------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+|  updateClock/CLK                            | player1/player_animation/animation_face[2]_i_1_n_0 |                                            |                1 |              1 |         1.00 |
+|  updateClock/CLK                            |                                                    |                                            |                3 |              4 |         1.33 |
+|  player1/o_next_position                    |                                                    | player1/o_next_position_reg[x][10]_i_3_n_0 |                5 |              9 |         1.80 |
+|  player1/o_next_position_reg[y][10]_i_2_n_0 |                                                    | player1/o_next_position_reg[y][10]_i_3_n_0 |                7 |              9 |         1.29 |
+|  i_clk_IBUF_BUFG                            | i_bomb_U18_IBUF                                    |                                            |                3 |             10 |         3.33 |
+|  display_signal/pixelClockDivider/CLK       |                                                    | display_signal/yCoord                      |                5 |             11 |         2.20 |
+|  display_signal/pixelClockDivider/CLK       | display_signal/yCoord                              |                                            |                4 |             11 |         2.75 |
+|  updateClock/CLK                            | map/o_led_OBUF[1]_inst_i_2_0                       |                                            |                6 |             18 |         3.00 |
+|  i_clk_IBUF_BUFG                            |                                                    |                                            |              287 |            920 |         3.21 |
++---------------------------------------------+----------------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+
+

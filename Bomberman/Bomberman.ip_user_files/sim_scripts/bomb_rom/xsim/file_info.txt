@@ -1,0 +1,2 @@
+bomb_rom.v,verilog,xil_defaultlib,../../../../Bomberman.gen/sources_1/ip/bomb_rom/sim/bomb_rom.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

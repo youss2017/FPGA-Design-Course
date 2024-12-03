@@ -21,8 +21,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 import rapid_pkg::*;
 
-module decode_testbench
-#(parameter XLEN = 32)();
+module decode_testbench();
 
     bit i_clk, i_reset;
     logic [XLEN-1:0] i_instruction, i_pc, o_pc, o_imm;
@@ -51,8 +50,6 @@ module decode_testbench
     endtask
     
     task load_instruction(input logic [XLEN-1:0] instruction, input logic [XLEN-1:0] pc);
-        #5 
-        i_clk <= ~i_clk; 
         i_pipeline_ready <= 1;
         i_instruction <= instruction;
         i_pc <= pc;
@@ -74,16 +71,12 @@ module decode_testbench
         
         // Reset the decoder
         reset_decoder();
+        do_clock(3);
+        
+        // Load an example instruction and run a few clock cycles to observe behavior
+        load_instruction(32'h401182b3, 32'h00000020);
         do_clock(2);
-        
-        // Load an example instruction and run a few clock cycles to observe behavior
-        load_instruction(32'h00500613, 32'h00000020);
-        do_clock(5);
-        
-        // Load an example instruction and run a few clock cycles to observe behavior
-        load_instruction(32'hffb00613, 32'h00000020);
-        do_clock(5);        
-                
+             
         $display("Testbench completed.");
         $stop;
     end
